@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/28/18 at 17:41:40
+$Modified: 08/28/18 at 17:53:48
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -1807,7 +1807,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 +Flags: ( )
 
-#Events		;! 9 total
+#Events		;! 10 total
 
 $Formula: ( when 
    ( has-departed-delay 0 "Observer 1" ) 
@@ -1971,6 +1971,27 @@ $Formula: ( when
 +Interval: 10
 
 $Formula: ( when 
+   ( true ) 
+   ( set-object-position 
+      "To the bot of SD:1" 
+      ( get-object-x "Impassioned" ) 
+      ( get-object-y "Impassioned" ) 
+      ( get-object-z "Impassioned" ) 
+   )
+   ( when 
+      ( true ) 
+      ( add-nav-waypoint 
+         "Bottom of SD" 
+         "To the bot of SD" 
+         1 
+      )
+   )
+)
++Name: Waypoint to follow SD
++Repeat Count: 999999
++Interval: 1
+
+$Formula: ( when 
    ( has-time-elapsed 60 ) 
    ( add-goal 
       "Freighter One" 
@@ -1999,12 +2020,6 @@ $Formula: ( when
       0 
       1000 
       ( true ) 
-   )
-   ( set-object-position 
-      "To the bot of SD:1" 
-      ( get-object-x "Impassioned" ) 
-      ( get-object-y "Impassioned" ) 
-      ( get-object-z "Impassioned" ) 
    )
 )
 +Name: Kamikaze test
