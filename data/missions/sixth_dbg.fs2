@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/28/18 at 18:08:20
+$Modified: 08/28/18 at 18:22:24
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -1816,10 +1816,18 @@ $Formula: ( when
       ( get-object-x 
          "Freighter One" 
          "<none>" 
-         400 
       )
-      ( get-object-y "Freighter One" ) 
-      ( get-object-z "Freighter One" ) 
+      ( get-object-y 
+         "Freighter One" 
+         "<none>" 
+      )
+      ( get-object-z 
+         "Freighter One" 
+         "<none>" 
+         0 
+         0 
+         -400 
+      )
    )
    ( set-object-facing-object 
       "Alpha 1" 
@@ -2022,17 +2030,20 @@ $Formula: ( when
          "Kamikaze" 
       )
    )
-   ( ship-maneuver 
-      "Freighter One" 
-      100 
-      0 
-      0 
-      0 
-      ( true ) 
-      0 
-      0 
-      1000 
-      ( true ) 
+   ( when 
+      ( false ) 
+      ( ship-maneuver 
+         "Freighter One" 
+         100 
+         0 
+         0 
+         0 
+         ( true ) 
+         0 
+         0 
+         1000 
+         ( true ) 
+      )
    )
 )
 +Name: Kamikaze test
@@ -2041,7 +2052,7 @@ $Formula: ( when
 
 $Formula: ( when 
    ( true ) 
-   ( set-object-speed-x 
+   ( set-object-speed-z 
       "Freighter One" 
       300 
       ( true ) 
