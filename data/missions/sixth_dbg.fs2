@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/28/18 at 19:12:31
+$Modified: 08/28/18 at 20:21:58
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,7 +28,7 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -6043.957031, 1493.158936, 1103.619019
++Viewer pos: -2193.970703, 684.005249, 642.852478
 +Viewer orient:
 	0.364282, -0.000002, -0.931289,
 	0.290371, 0.950150, 0.113579,
@@ -1552,7 +1552,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "no-shields" "no-dynamic" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -2023,21 +2023,6 @@ $Formula: ( when
       )
    )
    ( when 
-      ( false ) 
-      ( ship-maneuver 
-         "Freighter One" 
-         100 
-         0 
-         0 
-         0 
-         ( true ) 
-         0 
-         0 
-         1000 
-         ( true ) 
-      )
-   )
-   ( when 
       ( true ) 
       ( add-goal 
          "Freighter One" 
@@ -2047,27 +2032,49 @@ $Formula: ( when
          )
       )
    )
+   ( change-ship-class 
+      "GTDR Amazon Advanced#Fast" 
+      "Freighter One" 
+   )
+   ( when 
+      ( true ) 
+      ( ship-maneuver 
+         "Freighter One" 
+         20000 
+         0 
+         0 
+         0 
+         ( true ) 
+         0 
+         0 
+         100 
+         ( true ) 
+      )
+   )
 )
 +Name: Kamikaze test
 +Repeat Count: 1
 +Interval: 1
 
-$Formula: ( every-time 
-   ( true ) 
-   ( set-object-speed-z 
-      "Freighter One" 
-      300 
+$Formula: ( when 
+   ( false ) 
+   ( when 
       ( true ) 
+      ( set-object-speed-z 
+         "Freighter One" 
+         300 
+         ( true ) 
+      )
    )
 )
 +Name: Speed max test
-+Repeat Count: 20
-+Interval: 1
++Repeat Count: 99999
++Interval: 0
 +Chained: 0
 
 $Formula: ( when 
    ( >= 
-      200 
+      400 
       ( distance 
          "Freighter One" 
          "To the bot of SD:1" 
