@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/29/18 at 01:20:37
+$Modified: 08/29/18 at 01:49:47
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -142,7 +142,7 @@ $Ship Choices: (
 $Name: Alpha 1		;! Object #0
 $Class: GTF Pegasus
 $Team: Friendly
-$Location: 971.347778, 499.999084, 2609.730957
+$Location: -178.558380, 499.999939, 3695.950439
 $Orientation:
 	-0.249962, 0.000000, 0.968256,
 	-0.245538, 0.967312, -0.063387,
@@ -1802,7 +1802,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 +Flags: ( )
 
-#Events		;! 15 total
+#Events		;! 13 total
 
 $Formula: ( when 
    ( false ) 
@@ -2104,41 +2104,15 @@ $Formula: ( when
       "Hostile" 
       "Freighter One" 
    )
-)
-+Name: Speed up
-+Repeat Count: 1
-+Interval: 1
-+Chained: 5
-
-$Formula: ( when 
-   ( >= 
-      ( current-speed "Freighter One" ) 
-      370 
-   )
-   ( do-nothing ) 
-)
-+Name: Speed gained
-+Repeat Count: 1
-+Interval: 1
-+Chained: 0
-
-$Formula: ( when 
-   ( <= 
-      ( distance 
-         "Freighter One" 
-         "To the bot of SD:1" 
-      )
-      400 
-   )
    ( add-to-collision-group 
       "Impassioned" 
       0 
    )
 )
-+Name: Near collision
++Name: Speed up
 +Repeat Count: 1
 +Interval: 1
-+Chained: 0
++Chained: 5
 
 $Formula: ( when 
    ( <= 
