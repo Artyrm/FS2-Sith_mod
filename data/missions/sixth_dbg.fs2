@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/28/18 at 13:36:12
+$Modified: 08/28/18 at 15:45:31
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -1086.288696, 249.062988, 1239.875122
++Viewer pos: -901.147217, 34.297180, 1908.585693
 +Viewer orient:
-	0.936775, -0.000001, -0.349933,
-	0.129470, 0.929039, 0.346590,
-	0.325101, -0.369983, 0.870300
+	-0.986936, 0.000001, -0.161113,
+	0.062920, 0.920590, -0.385429,
+	0.148319, -0.390531, -0.908563
 
 
 $Skybox Model: frozenhurricanebox.pof
@@ -1536,7 +1536,7 @@ $Determination: 10
 +Score: 8
 
 $Name: GTF Ulysses 50		;! Object #50
-$Class: GTNB Pharos
+$Class: GTEP Hermes
 $Team: Friendly
 $Location: -895.116699, -0.000288, 1829.523315
 $Orientation:
@@ -1545,6 +1545,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
@@ -1553,7 +1554,7 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "no-shields" )
-+Flags2: ( "no-collide" )
++Flags2: ( )
 +Respawn priority: 0
 +Group: 0
 +Score: 8
