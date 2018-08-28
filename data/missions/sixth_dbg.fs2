@@ -1,10 +1,10 @@
 #Mission Info
 
 $Version: 0.10
-$Name:  XSTR("6. Great Battle test", -1)
+$Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/28/18 at 19:09:27
+$Modified: 08/28/18 at 19:12:31
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
