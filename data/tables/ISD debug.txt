@@ -1,0 +1,86 @@
+WARNING: "Not all subsystems in model "isd.pof" have a record in ships.tbl. This can cause game to crash.  List of subsystems not found from table is in log file. " at modelread.cpp:800
+Subsystem turret25 in model isd.pof was not found in ships.tbl!
+Subsystem turret26 in model isd.pof was not found in ships.tbl!
+Subsystem turret27 in model isd.pof was not found in ships.tbl!
+Subsystem turret28 in model isd.pof was not found in ships.tbl!
+Subsystem turret29 in model isd.pof was not found in ships.tbl!
+Subsystem turret30 in model isd.pof was not found in ships.tbl!
+Subsystem turret31 in model isd.pof was not found in ships.tbl!
+Subsystem turret32 in model isd.pof was not found in ships.tbl!
+Subsystem Bridge in model isd.pof was not found in ships.tbl!
+Subsystem turret12 in model isd.pof was not found in ships.tbl!
+Subsystem turret13 in model isd.pof was not found in ships.tbl!
+Subsystem turret14 in model isd.pof was not found in ships.tbl!
+Subsystem turret09 in model isd.pof was not found in ships.tbl!
+Subsystem turret10 in model isd.pof was not found in ships.tbl!
+Subsystem turret11 in model isd.pof was not found in ships.tbl!
+Subsystem turret17 in model isd.pof was not found in ships.tbl!
+Subsystem turret18 in model isd.pof was not found in ships.tbl!
+Subsystem turret15 in model isd.pof was not found in ships.tbl!
+Subsystem turret16 in model isd.pof was not found in ships.tbl!
+Subsystem turret19 in model isd.pof was not found in ships.tbl!
+Subsystem turret20 in model isd.pof was not found in ships.tbl!
+Subsystem turret21 in model isd.pof was not found in ships.tbl!
+Subsystem turret22 in model isd.pof was not found in ships.tbl!
+Subsystem turret23 in model isd.pof was not found in ships.tbl!
+Subsystem turret24 in model isd.pof was not found in ships.tbl!
+Subsystem turret33 in model isd.pof was not found in ships.tbl!
+Subsystem turret34 in model isd.pof was not found in ships.tbl!
+Subsystem turret35 in model isd.pof was not found in ships.tbl!
+Subsystem turret36 in model isd.pof was not found in ships.tbl!
+Subsystem turret37 in model isd.pof was not found in ships.tbl!
+Subsystem turret38 in model isd.pof was not found in ships.tbl!
+Subsystem turret39 in model isd.pof was not found in ships.tbl!
+Subsystem turret40 in model isd.pof was not found in ships.tbl!
+Subsystem turret41 in model isd.pof was not found in ships.tbl!
+Subsystem turret42 in model isd.pof was not found in ships.tbl!
+Subsystem turret43 in model isd.pof was not found in ships.tbl!
+Subsystem turret44 in model isd.pof was not found in ships.tbl!
+Subsystem turret45 in model isd.pof was not found in ships.tbl!
+Subsystem turret46 in model isd.pof was not found in ships.tbl!
+Subsystem Fighterbay in model isd.pof was not found in ships.tbl!
+Subsystem Sensors01 in model isd.pof was not found in ships.tbl!
+Subsystem Sensors02 in model isd.pof was not found in ships.tbl!
+Subsystem Reactor in model isd.pof was not found in ships.tbl!
+Subsystem Engine01 in model isd.pof was not found in ships.tbl!
+Subsystem Engine02 in model isd.pof was not found in ships.tbl!
+Subsystem Engine03 in model isd.pof was not found in ships.tbl!
+Subsystem Bridge in model isd.pof was not found in ships.tbl!
+Turret submodel 3 not found for turret 0 in model isd.pof
+Turret submodel 5 not found for turret 1 in model isd.pof
+Turret submodel 7 not found for turret 2 in model isd.pof
+Turret submodel 9 not found for turret 3 in model isd.pof
+Turret submodel 16 not found for turret 4 in model isd.pof
+Turret submodel 18 not found for turret 5 in model isd.pof
+Turret submodel 20 not found for turret 6 in model isd.pof
+Turret submodel 22 not found for turret 7 in model isd.pof
+Turret submodel 104 not found for turret 16 in model isd.pof
+Turret submodel 106 not found for turret 17 in model isd.pof
+Turret submodel 108 not found for turret 18 in model isd.pof
+Turret submodel 110 not found for turret 19 in model isd.pof
+Turret submodel 112 not found for turret 20 in model isd.pof
+Turret submodel 114 not found for turret 21 in model isd.pof
+Turret submodel 116 not found for turret 22 in model isd.pof
+Turret submodel 118 not found for turret 23 in model isd.pof
+Turret submodel 120 not found for turret 24 in model isd.pof
+Turret submodel 122 not found for turret 25 in model isd.pof
+Turret submodel 151 not found for turret 26 in model isd.pof
+Turret submodel 153 not found for turret 27 in model isd.pof
+Turret submodel 155 not found for turret 28 in model isd.pof
+Turret submodel 157 not found for turret 29 in model isd.pof
+Turret submodel 159 not found for turret 30 in model isd.pof
+Turret submodel 161 not found for turret 31 in model isd.pof
+Turret submodel 169 not found for turret 32 in model isd.pof
+Turret submodel 171 not found for turret 33 in model isd.pof
+Turret submodel 173 not found for turret 34 in model isd.pof
+Turret submodel 175 not found for turret 35 in model isd.pof
+Turret submodel 177 not found for turret 36 in model isd.pof
+Turret submodel 179 not found for turret 37 in model isd.pof
+Turret submodel 181 not found for turret 38 in model isd.pof
+Turret submodel 183 not found for turret 39 in model isd.pof
+Turret submodel 185 not found for turret 40 in model isd.pof
+Turret submodel 187 not found for turret 41 in model isd.pof
+Turret submodel 189 not found for turret 42 in model isd.pof
+Turret submodel 191 not found for turret 43 in model isd.pof
+Turret submodel 193 not found for turret 44 in model isd.pof
+Turret submodel 195 not found for turret 45 in model isd.pof

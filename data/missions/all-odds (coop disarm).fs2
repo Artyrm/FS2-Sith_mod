@@ -1,0 +1,805 @@
+#Mission Info
+
+$Version: 0.10
+$Name:  XSTR("All - Beat disarm", -1)
+$Author: FekLeyrTarg/IrresponsibleCaptNa
+$Created: 03/19/14 at 13:53:53
+$Modified: 04/15/18 at 21:15:01
+$Notes:
+This mission is a recreation of a mission from "Star Wars: X-Wing" by LucasArts.
+$End Notes:
+
+$Mission Desc:
+ XSTR("", -1)
+$end_multi_text
++Game Type Flags: 10
++Flags: 131072
++Fog Near Mult: 1.000000
+
++Fog Far Mult: 1.000000
+
+
++Num Players: 3
+
++Num Respawns: 0
+
++Max Respawn Time: -1
++Disallow Support: 0
++Hull Repair Ceiling: 0.000000
++Subsystem Repair Ceiling: 100.000000
+
++Viewer pos: 714.702148, -560.908264, -1703.329224
++Viewer orient:
+	0.672117, -0.000002, 0.740445,
+	0.105449, 0.989808, -0.095715,
+	-0.732898, 0.142411, 0.665266
+
+$Starting wing names: ( "Red" "Blue" "Gold" )
+$Squadron wing names: ( "Red" "Blue" "Gold" "Delta" "Epsilon" )
+$Team-versus-team wing names: ( "Red" "Zeta" )
+
+$Skybox Model: frozenhurricanebox.pof
++Skybox Orientation:
+	0.829038, -0.000000, -0.559193,
+	0.544861, -0.224951, 0.807789,
+	-0.125791, -0.974370, -0.186493
+
+$AI Profile: FS2 RETAIL
+
+#Command Briefing
+
+#Briefing
+$start_briefing
+$num_stages: 3
+$start_stage
+$multi_text
+ XSTR("X-Wings from $gRed $gSquadron will test Imperial defenses near $rCircarpous $rIV.", -1)
+$end_multi_text
+$voice: All-Odds1.wav
+$camera_pos: 0.146227, 2485.754150, -431.756897
+$camera_orient:
+	0.999998, -0.000001, -0.001750,
+	0.001746, -0.064640, 0.997907,
+	-0.000114, -0.997909, -0.064640
+$camera_time: 500
+$num_lines: 0
+$num_icons: 3
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 1
+$team: Friendly
+$class: GTF Ulysses
+$pos: 1153.236084, -0.000077, -1000.390808
+$label: X-Wing Red (You)
++id: 1
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Hostile
+$class: GTF Ulysses
+$pos: -956.181396, -0.000056, -786.994690
+$label: Circarpous IV
++id: 2
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: GTF Ulysses
+$pos: -367.001587, -0.000043, -234.543900
+$label: TIE Fighters
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("You may expect to encounter $rTIE $rFighters performing barrier defense.", -1)
+$end_multi_text
+$voice: All-Odds2.wav
+$camera_pos: 0.136730, 2402.615479, -437.142212
+$camera_orient:
+	0.999998, -0.000001, -0.001750,
+	0.001746, -0.064640, 0.997907,
+	-0.000114, -0.997909, -0.064640
+$camera_time: 500
+$num_lines: 0
+$num_icons: 3
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 1
+$team: Friendly
+$class: GTF Ulysses
+$pos: 1153.236084, -0.000077, -1000.390808
+$label: X-Wing Red (You)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Hostile
+$class: GTF Ulysses
+$pos: -956.181396, -0.000056, -786.994690
+$label: Circarpous IV
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: GTF Ulysses
+$pos: -367.001587, -0.000043, -234.543900
+$label: TIE Fighters
++id: 3
+$hlight: 1
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$start_stage
+$multi_text
+ XSTR("$rEngage and destroy the $rTIEs and then return to base", -1)
+$end_multi_text
+$voice: All-Odds3.wav
+$camera_pos: 0.139896, 2430.328369, -435.347107
+$camera_orient:
+	0.999998, -0.000001, -0.001750,
+	0.001746, -0.064640, 0.997907,
+	-0.000114, -0.997909, -0.064640
+$camera_time: 500
+$num_lines: 0
+$num_icons: 3
+$Flags: 0
+$Formula: ( true ) 
+$start_icon
+$type: 1
+$team: Friendly
+$class: GTF Ulysses
+$pos: 1153.236084, -0.000077, -1000.390808
+$label: X-Wing Red (You)
++id: 1
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 7
+$team: Hostile
+$class: GTF Ulysses
+$pos: -956.181396, -0.000056, -786.994690
+$label: Circarpous IV
++id: 2
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$start_icon
+$type: 1
+$team: Hostile
+$class: GTF Ulysses
+$pos: -367.001587, -0.000043, -234.543900
+$label: TIE Fighters
++id: 3
+$hlight: 0
+$mirror: 0
+$multi_text
+$end_multi_text
+$end_icon
+$end_stage
+$end_briefing
+
+#Debriefing_info
+
+$Num stages: 3
+
+$Formula: ( is-destroyed-delay 
+   0 
+   "Alpha" 
+   "Beta" 
+   "Gamma" 
+)
+$Multi text
+    XSTR("Congratulations. You have earned the skills needed to defeat an enemy outnumbering you.
+But don't get too overconfident. Use your good judgement before engaging or retreating from outnumbering hostiles.
+", -1)
+$end_multi_text
+$Voice: none.wav
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( and 
+   ( is-destroyed-delay 
+      0 
+      "Alpha" 
+      "Beta" 
+      "Gamma" 
+   )
+   ( or 
+      ( is-destroyed-delay 0 "Red 2" ) 
+      ( is-destroyed-delay 0 "Red 3" ) 
+      ( is-destroyed-delay 0 "Red 1" ) 
+   )
+)
+$Multi text
+    XSTR("However, you've also lost part of your squadron. It is very important that you watch your leader's and you wingman's back. That way you all have a higher chance for success and survival. Always keep that in mind.", -1)
+$end_multi_text
+$Voice: none.wav
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+$Formula: ( is-destroyed-delay 
+   0 
+   "Alpha" 
+   "Beta" 
+   "Gamma" 
+)
+$Multi text
+    XSTR("Many business leaders on Circarpous IV, being fed up by Imperial taxation, decided to fund the Rebel Alliance. This attack you have just re-enacted created sympathy for the Alliance in the Circarpous system.", -1)
+$end_multi_text
+$Voice: none.wav
+$Recommendation text:
+    XSTR("", -1)
+$end_multi_text
+
+#Players		;! 3 total
+
+$Starting Shipname: Red 1
+$Ship Choices: (
+)
+
++Weaponry Pool: (
+	"Subach HL-7"	6
+	"Prometheus R"	6
+	"Harpoon"	96
+)
+
+#Objects		;! 12 total
+
+$Name: Red 1		;! Object #0
+$Class: GTF Ulysses
+$Team: Friendly
+$Location: -1.728117, 0.000117, -243.675003
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Red 2		;! Object #1
+$Class: GTF Ulysses
+$Team: Friendly
+$Location: -45.589005, 0.000132, -277.217468
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Red 3		;! Object #2
+$Class: GTF Ulysses
+$Team: Friendly
+$Location: 39.861389, 0.000090, -280.718445
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
+$AI Goals: ( goals ( ai-play-dead 50 ) )
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "player-start" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Alpha 1		;! Object #3
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: -1140.379272, 354.464172, 3654.493164
+$Orientation:
+	0.917121, 0.000000, 0.398609,
+	0.000000, 1.000000, 0.000000,
+	-0.398609, 0.000000, 0.917121
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Primary Banks: ( "" "" )
++Secondary Banks: ( "" )
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Alpha 2		;! Object #4
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: -1134.822876, 354.464172, 3583.435547
+$Orientation:
+	0.917121, -0.000000, 0.398609,
+	0.000000, 1.000000, 0.000000,
+	-0.398609, 0.000000, 0.917121
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Primary Banks: ( "" "" )
++Secondary Banks: ( "" )
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Alpha 3		;! Object #5
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: -1210.817749, 354.464264, 3623.878418
+$Orientation:
+	0.917121, -0.000000, 0.398609,
+	0.000000, 1.000000, 0.000000,
+	-0.398609, 0.000000, 0.917121
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Primary Banks: ( "" "" )
++Secondary Banks: ( "" )
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Beta 1		;! Object #6
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: -3728.229736, -0.000290, 5365.856445
+$Orientation:
+	0.917121, -0.000000, 0.398609,
+	0.000000, 1.000000, 0.000000,
+	-0.398609, 0.000000, 0.917121
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Primary Banks: ( "" "" )
++Secondary Banks: ( "" )
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Beta 2		;! Object #7
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: -3845.486816, -0.000289, 5327.968750
+$Orientation:
+	0.917121, -0.000000, 0.398609,
+	0.000000, 1.000000, 0.000000,
+	-0.398609, 0.000000, 0.917121
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Primary Banks: ( "" "" )
++Secondary Banks: ( "" )
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Beta 3		;! Object #8
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: -3691.585938, -0.000275, 5239.387207
+$Orientation:
+	0.917121, -0.000000, 0.398609,
+	0.000000, 1.000000, 0.000000,
+	-0.398609, 0.000000, 0.917121
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Primary Banks: ( "" "" )
++Secondary Banks: ( "" )
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Gamma 1		;! Object #9
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: -622.905396, -374.232300, 6669.647949
+$Orientation:
+	0.917121, -0.000000, 0.398609,
+	0.000000, 1.000000, 0.000000,
+	-0.398609, 0.000000, 0.917121
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Primary Banks: ( "" "" )
++Secondary Banks: ( "" )
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Gamma 2		;! Object #10
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: -540.203979, -374.232300, 6604.070801
+$Orientation:
+	0.917121, -0.000000, 0.398609,
+	0.000000, 1.000000, 0.000000,
+	-0.398609, 0.000000, 0.917121
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Primary Banks: ( "" "" )
++Secondary Banks: ( "" )
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+$Name: Gamma 3		;! Object #11
+$Class: GTF Ulysses
+$Team: Hostile
+$Location: -497.511353, -374.232300, 6695.421387
+$Orientation:
+	0.917121, -0.000000, 0.398609,
+	0.000000, 1.000000, 0.000000,
+	-0.398609, 0.000000, 0.917121
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
++Primary Banks: ( "" "" )
++Secondary Banks: ( "" )
++Sbank Ammo: ( 0 )
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" "don't-collide-invisible" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 8
+
+#Wings		;! 4 total
+
+$Name: Red
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Red 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Red 1"
+	"Red 2"
+	"Red 3"
+)
+$AI Goals: ( goals ( ai-play-dead 50 ) )
++Flags: ( )
+
+$Name: Alpha
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Alpha 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Alpha 1"
+	"Alpha 2"
+	"Alpha 3"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Hotkey: 0
++Flags: ( )
+
+$Name: Beta
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Beta 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Beta 1"
+	"Beta 2"
+	"Beta 3"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Hotkey: 1
++Flags: ( )
+
+$Name: Gamma
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Gamma 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 3 total
+	"Gamma 1"
+	"Gamma 2"
+	"Gamma 3"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Hotkey: 2
++Flags: ( )
+
+#Events		;! 3 total
+
+$Formula: ( when 
+   ( is-goal-true-delay "destroy" 0 ) 
+   ( do-nothing ) 
+)
++Name: destroy
++Repeat Count: 1
++Interval: 1
++Objective:  XSTR("Destroy TIEs", -1)
+
+$Formula: ( when 
+   ( is-goal-true-delay "destroy" 4 ) 
+   ( send-message 
+      "#Command" 
+      "High" 
+      "beat" 
+   )
+)
++Name: beat
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-event-true-delay "beat" 3 ) 
+   ( send-message 
+      "#Command" 
+      "High" 
+      "keep" 
+   )
+)
++Name: keep
++Repeat Count: 1
++Interval: 1
+
+#Goals		;! 1 total
+
+$Type: Primary
++Name: destroy
+$MessageNew:  XSTR("Destroy TIEs", -1)
+$end_multi_text
+$Formula: ( is-destroyed-delay 
+   0 
+   "Alpha" 
+   "Beta" 
+   "Gamma" 
+)
+
+#Waypoints		;! 0 lists total
+
+
+#Messages		;! 2 total
+
+
+$Name: beat
+$Team: -1
+$MessageNew:  XSTR("You beat the odds!", -1)
+$end_multi_text
++AVI Name: H_RO1
+
+$Name: keep
+$Team: -1
+$MessageNew:  XSTR("Keep up the good work!", -1)
+$end_multi_text
++AVI Name: H_RO1
+
+#Reinforcements		;! 0 total
+
+
+#Background bitmaps		;! 3 total
+
+$Num stars: 2000
+$Ambient light level: 9155051
+
+$Bitmap List:
+$Sun: SunViolet
++Angles: 0.872665 0.000000 1.047198
++Scale: 1.000000
+$Starbitmap: NebulE1-Main
++Angles: 0.000000 6.248279 2.792527
++ScaleX: 10.000000
++ScaleY: 10.000000
++DivX: 1
++DivY: 1
+$Starbitmap: planetb
++Angles: 5.672320 4.118977 5.602507
++ScaleX: 2.000000
++ScaleY: 2.000000
++DivX: 1
++DivY: 1
+$Starbitmap: planete
++Angles: 0.000000 0.000000 0.000000
++ScaleX: 10.000000
++ScaleY: 10.000000
++DivX: 1
++DivY: 1
+
+#Asteroid Fields
+
+#Music
+
+$Event Music: None
+$Briefing Music: None
+
+#End
+

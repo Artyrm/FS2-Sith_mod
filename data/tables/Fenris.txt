@@ -1,0 +1,66 @@
+$Name:                          @GTC Fenris
+$Short name:					TCruise
+$Species:                       Terran
++Tech Description:
+XSTR("The GTC Fenris class is the aging stalwart among the Alliance's warships. Before the Great War, the Fenris was Terran Command's only class of cruisers. During the war, Terran Command decided to build a second line of cruisers, the Leviathans, to free the Fenris from escort and guard duties. Fenris cruisers have fought in virtually every theatre of operation. These fast, versatile cruisers pack enough punch in their 260-meter-long hulls to go toe-to-toe with any enemy cruiser. The Fenris's speed and maneuverability make it a good choice for strike missions.", 3045)
+$end_multi_text
+$POF file:                      isd.pof
+$Detail distance:				(0, 1200, 3500)
+$Show damage:					YES
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       1.0
+$Max Velocity:					0.0, 0.0, 20.0
+$Rotation time:					40.0, 40.0, 40.0
+$Rear Velocity:					0.0
+$Forward accel:					10.0
+$Forward decel:					5.0
+$Slide accel:					0.0
+$Slide decel:					0.0
+$Expl inner rad:				125.0
+$Expl outer rad:				650.0
+$Expl damage:					200.0
+$Expl blast:					3500.0
+$Expl Propagates:				YES				;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Shockwave Speed:				500.0			;; speed shockwave expands at, 0 means no shockwave
+$Default PBanks:				()
+$Default SBanks:				()
+$SBank Capacity:				()
+$Shields:                       75000
+$Power Output:					400.0
+$Shield Regeneration Rate:	0.0007
+$Weapon Regeneration Rate:	0.35
+$Max Oclk Speed:				55.0
+$Max Weapon Eng:				200.0
+$Hitpoints:                     10000
+$Flags:                         ( "cruiser" "in tech database")
+$AI Class:                      Captain
+$Afterburner:					NO
+$Countermeasures:				0
+$Scan time:                     2000
+$EngineSnd:						128                   ;; Engine sound of ship
+$Closeup_pos:					0.0, 0.0, -315
+$Closeup_zoom:					0.1
+$Score:							100
+$Subsystem:                     turret01, 2, 5.0
+	$Default PBanks:			( "Terran Turret" )
+$Subsystem:                     turret02, 3, 5.0
+	$Default PBanks:			( "LTerSlash" )
+$Subsystem:                     turret03, 2, 5.0
+	$Default PBanks:			( "Terran Turret" )
+$Subsystem:                     turret04, 2, 5.0
+	$Default PBanks:			( "AAAf" )
+$Subsystem:                     turret05, 2, 5.0
+	$Default PBanks:			( "Terran Turret" )
+$Subsystem:                     turret06, 2, 5.0
+	$Default PBanks:			( "AAAf" )
+$Subsystem:                     turret07, 2, 5.0
+	$Default PBanks:			( "Terran Turret" )
+$Subsystem:                     turret08, 2, 5.0
+	$Default PBanks:			( "Terran Turret" )
+$Subsystem:                     sensors,                         4, 0
+$Subsystem:                     communication,  4, 0.0
+$Subsystem:                     navigation,              4, 0.0
+$Subsystem:                     weapons,                         4, 0.0
+$Subsystem:                     engine,                 30, 0.0
+	$Engine Wash:				Default100

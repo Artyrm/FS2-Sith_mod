@@ -1,0 +1,9 @@
+"I-3 Light Turbolaser"
+"I-5 Medium Turbolaser"
+"I-8 Turbolaser"
+"I-7 Heavy Turbolaser"
+
+
+"Terran Turret Weak"
+"Terran Turret"
+"Terran Huge Turret"
