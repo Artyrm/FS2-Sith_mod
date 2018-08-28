@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/28/18 at 18:22:24
+$Modified: 08/28/18 at 19:09:27
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,7 +28,7 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -1072.639404, 67.748207, 1739.874023
++Viewer pos: -6043.957031, 1493.158936, 1103.619019
 +Viewer orient:
 	0.364282, -0.000002, -0.931289,
 	0.290371, 0.950150, 0.113579,
@@ -1512,7 +1512,7 @@ $Determination: 10
 $Name: Cargo One		;! Object #49
 $Class: TAC 1
 $Team: Friendly
-$Location: -940.289917, 14.000002, 1884.363159
+$Location: -906.733704, 14.000000, 1898.325195
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1537,7 +1537,7 @@ $Determination: 10
 $Name: Freighter One		;! Object #50
 $Class: GTDR Amazon Advanced
 $Team: Friendly
-$Location: -799.950256, -0.000055, 1832.442627
+$Location: -672.854004, 0.000412, 258.628448
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1552,7 +1552,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "no-shields" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -2013,15 +2013,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( has-time-elapsed 60 ) 
-   ( add-goal 
-      "Freighter One" 
-      ( ai-waypoints-once 
-         "To the bot of SD" 
-         89 
-      )
-   )
-   ( kamikaze 30000 "Freighter One" ) 
+   ( has-time-elapsed 10 ) 
    ( when 
       ( true ) 
       ( send-message 
@@ -2045,12 +2037,22 @@ $Formula: ( when
          ( true ) 
       )
    )
+   ( when 
+      ( true ) 
+      ( add-goal 
+         "Freighter One" 
+         ( ai-waypoints-once 
+            "To the bot of SD" 
+            89 
+         )
+      )
+   )
 )
 +Name: Kamikaze test
 +Repeat Count: 1
 +Interval: 1
 
-$Formula: ( when 
+$Formula: ( every-time 
    ( true ) 
    ( set-object-speed-z 
       "Freighter One" 
@@ -2059,16 +2061,16 @@ $Formula: ( when
    )
 )
 +Name: Speed max test
-+Repeat Count: 1
++Repeat Count: 20
 +Interval: 1
-+Chained: 1
++Chained: 0
 
 $Formula: ( when 
    ( >= 
-      10 
+      200 
       ( distance 
          "Freighter One" 
-         "Impassioned" 
+         "To the bot of SD:1" 
       )
    )
    ( explosion-effect 
@@ -2088,7 +2090,7 @@ $Formula: ( when
 +Name: Kamikaze explode
 +Repeat Count: 1
 +Interval: 1
-+Chained: 1
++Chained: 0
 
 #Goals		;! 1 total
 
@@ -2158,6 +2160,8 @@ $Name: Kamikaze
 $Team: -1
 $MessageNew:  XSTR("Banzaaaaaaaaaaai!", -1)
 $end_multi_text
++Persona: Wingman 4
++AVI Name: Head-TP2
 
 #Reinforcements		;! 0 total
 
