@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/28/18 at 17:53:48
+$Modified: 08/28/18 at 18:08:20
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -1807,7 +1807,29 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 +Flags: ( )
 
-#Events		;! 10 total
+#Events		;! 11 total
+
+$Formula: ( when 
+   ( true ) 
+   ( set-object-position 
+      "Alpha 1" 
+      ( get-object-x 
+         "Freighter One" 
+         "<none>" 
+         400 
+      )
+      ( get-object-y "Freighter One" ) 
+      ( get-object-z "Freighter One" ) 
+   )
+   ( set-object-facing-object 
+      "Alpha 1" 
+      "Freighter One" 
+   )
+)
++Name: Initialize
++Repeat Count: 1
++Interval: 1
++Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
 
 $Formula: ( when 
    ( has-departed-delay 0 "Observer 1" ) 
@@ -1830,15 +1852,6 @@ $Formula: ( when
 +Name: Activate Trebuchet missiles
 +Repeat Count: 1
 +Interval: 1
-
-$Formula: ( every-time 
-   ( has-arrived-delay 1 "Hope" ) 
-   ( do-nothing ) 
-)
-+Name: Initialize
-+Repeat Count: 1
-+Interval: 1
-+Event Log Flags: ( "true" "false" "always false" "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
 
 $Formula: ( when 
    ( false ) 
@@ -2027,6 +2040,19 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
+   ( true ) 
+   ( set-object-speed-x 
+      "Freighter One" 
+      300 
+      ( true ) 
+   )
+)
++Name: Speed max test
++Repeat Count: 1
++Interval: 1
++Chained: 1
+
+$Formula: ( when 
    ( >= 
       10 
       ( distance 
@@ -2048,7 +2074,7 @@ $Formula: ( when
       7 
    )
 )
-+Name: Event name
++Name: Kamikaze explode
 +Repeat Count: 1
 +Interval: 1
 +Chained: 1
