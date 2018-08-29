@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/29/18 at 01:49:47
+$Modified: 08/29/18 at 01:56:15
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -12,12 +12,15 @@ $End Notes:
 $Mission Desc:
  XSTR("Defend Impassioned at all costs!", -1)
 $end_multi_text
-+Game Type Flags: 1
++Game Type Flags: 10
 +Flags: 0
 +Fog Near Mult: 1.000000
 
 +Fog Far Mult: 1.000000
 
++Num Players: 2
++Num Respawns: 0
++Max Respawn Time: -1
 +Disallow Support: 0
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
@@ -88,7 +91,7 @@ $end_briefing
 
 $Num stages: 0
 
-#Players		;! 1 total
+#Players		;! 2 total
 
 $Starting Shipname: Alpha 1
 $Ship Choices: (
@@ -181,7 +184,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "player-start" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0

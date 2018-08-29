@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/28/18 at 23:39:03
+$Modified: 08/29/18 at 04:11:54
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -22,11 +22,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 4366.463379, 1555.793213, 5939.324219
++Viewer pos: -5060.157715, 2024.808228, 6408.097168
 +Viewer orient:
-	-0.200778, -0.000002, 0.979637,
-	-0.261832, 0.963621, -0.053661,
-	-0.943998, -0.267274, -0.193474
+	-0.442916, -0.000002, -0.896563,
+	0.158332, 0.984283, -0.078221,
+	0.882472, -0.176600, -0.435954
 
 
 $Skybox Model: frozenhurricanebox.pof
@@ -142,11 +142,11 @@ $Ship Choices: (
 $Name: Alpha 1		;! Object #0
 $Class: GTF Pegasus
 $Team: Friendly
-$Location: -583.200012, 500.000000, 4784.799805
+$Location: 5328.299805, 1990.599976, 2928.500000
 $Orientation:
-	-0.983936, 0.000000, -0.178519,
-	0.021259, 0.992884, -0.117171,
-	0.177249, -0.119084, -0.976935
+	-0.534144, 0.000000, 0.845393,
+	0.057319, 0.997699, 0.036216,
+	-0.843448, 0.067802, -0.532915
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", -1)
@@ -166,11 +166,11 @@ $Determination: 10
 $Name: Alpha 2		;! Object #1
 $Class: GTF Pegasus
 $Team: Friendly
-$Location: -653.242249, -0.002445, 1364.579834
+$Location: -583.000000, 500.000000, 4585.000000
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	-0.981073, 0.000000, -0.193640,
+	0.024992, 0.991636, -0.126624,
+	0.192021, -0.129066, -0.972867
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", -1)
@@ -765,7 +765,7 @@ $Determination: 10
 $Name: Impassioned		;! Object #24
 $Class: Imperial Frigate
 $Team: Friendly
-$Location: -136.670868, 200.000687, 2323.688721
+$Location: -136.699997, 200.000000, 2323.699951
 $Orientation:
 	-0.014143, 0.000000, 0.999900,
 	0.000000, 1.000000, 0.000000,
@@ -1503,39 +1503,14 @@ $Determination: 10
 +Use Table Score:
 +Score: 10
 
-$Name: Cargo One		;! Object #49
-$Class: TAC 1
-$Team: Friendly
-$Location: 2786.226563, 2014.000000, 3117.616455
-$Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
-$AI Behavior: None
-+AI Class: Captain
-$Cargo 1:  XSTR("Bomb", -1)
-+Initial Hull: 100
-+Initial Shields: 100
-+Subsystem: Pilot
-$Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Determination: 10
-+Flags: ( "no-shields" )
-+Flags2: ( )
-+Respawn priority: 0
-+Group: 0
-+Score: 8
-
-$Name: Freighter One		;! Object #50
+$Name: Freighter One		;! Object #49
 $Class: GTDR Amazon Advanced
 $Team: Friendly
-$Location: 2586.226563, 2000.000000, 3126.428955
+$Location: 5211.364258, 2000.000000, 2854.616699
 $Orientation:
-	1.000000, 0.000000, 0.000000,
+	1.000000, -0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	-0.000000, -0.000000, 1.000000
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -1546,16 +1521,44 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "no-dynamic" )
++Flags: ( "no-shields" "scannable" "no-dynamic" )
 +Flags2: ( )
 +Respawn priority: 0
++Group: 0
++Score: 8
+
+$Name: Cargo One		;! Object #50
+$Class: TAC 1
+$Team: Friendly
+$Location: 5211.565430, 2013.569824, 2850.602051
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	-0.000000, 0.999995, 0.003098,
+	0.000000, -0.003098, 0.999995
+$AI Behavior: None
++AI Class: Captain
+$Cargo 1:  XSTR("Bomb", -1)
++Initial Hull: 100
++Initial Shields: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "no-shields" )
++Flags2: ( )
++Respawn priority: 0
++Docked With: Freighter One
+$Docker Point: cargo dockpoint
+$Dockee Point: cargo dockpoint
 +Group: 0
 +Score: 8
 
 $Name: GTF Ulysses 51		;! Object #51
 $Class: GTNB Pharos.
 $Team: Friendly
-$Location: 2573.601563, 1999.998779, 3054.866455
+$Location: 3020.743408, 1999.998779, -1568.667358
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1799,21 +1802,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 +Flags: ( )
 
-#Events		;! 12 total
-
-$Formula: ( when 
-   ( true ) 
-   ( set-docked 
-      "Freighter One" 
-      "cargo dockpoint" 
-      "Cargo One" 
-      "cargo dockpoint" 
-   )
-)
-+Name: Dock
-+Repeat Count: 1
-+Interval: 1
-+Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
+#Events		;! 15 total
 
 $Formula: ( when 
    ( false ) 
@@ -1854,7 +1843,20 @@ $Formula: ( when
 +Name: Initialize
 +Repeat Count: 1
 +Interval: 1
-+Objective:  XSTR("You kidding me?", -1)
++Objective:  XSTR("You kidding me!", -1)
++Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
+
+$Formula: ( when ( true ) ( hud-disable 1 ) ) 
++Name: Reset HUD
++Repeat Count: 1
++Interval: 1
++Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
+
+$Formula: ( when ( true ) ( hud-disable 0 ) ) 
++Name: Event name
++Repeat Count: 1
++Interval: 1
++Chained: 1
 +Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
 
 $Formula: ( when 
@@ -2013,9 +2015,18 @@ $Formula: ( when
    ( true ) 
    ( set-object-position 
       "To the bot of SD:1" 
-      ( get-object-x "Impassioned" ) 
-      ( get-object-y "Impassioned" ) 
-      ( get-object-z "Impassioned" ) 
+      ( get-object-x 
+         "Impassioned" 
+         "turret31" 
+      )
+      ( get-object-y 
+         "Impassioned" 
+         "turret31" 
+      )
+      ( get-object-z 
+         "Impassioned" 
+         "turret31" 
+      )
    )
    ( when 
       ( true ) 
@@ -2060,7 +2071,7 @@ $Formula: ( when
    )
    ( add-to-collision-group 
       "Impassioned" 
-      0 
+      1 
    )
    ( add-to-collision-group 
       "Cargo One" 
@@ -2072,7 +2083,11 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( true ) 
+   ( is-facing 
+      "Freighter One" 
+      "Impassioned" 
+      10 
+   )
    ( ship-maneuver 
       "Freighter One" 
       20000 
@@ -2082,8 +2097,16 @@ $Formula: ( when
       ( true ) 
       0 
       0 
-      100 
+      61 
       ( true ) 
+   )
+   ( change-iff 
+      "Hostile" 
+      "Freighter One" 
+   )
+   ( add-to-collision-group 
+      "Impassioned" 
+      0 
    )
 )
 +Name: Speed up
@@ -2092,25 +2115,12 @@ $Formula: ( when
 +Chained: 5
 
 $Formula: ( when 
-   ( >= 
-      300 
+   ( <= 
       ( distance 
          "Freighter One" 
          "To the bot of SD:1" 
       )
-   )
-   ( explosion-effect 
-      ( get-object-x "Freighter One" ) 
-      ( get-object-y "Freighter One" ) 
-      ( get-object-z "Freighter One" ) 
-      20000 
-      1000 
-      300 
-      100 
-      300 
-      1000 
-      2 
-      7 
+      50 
    )
    ( when 
       ( false ) 
@@ -2142,11 +2152,64 @@ $Formula: ( when
       "Impassioned" 
       0 
    )
+   ( explosion-effect 
+      ( get-object-x "Freighter One" ) 
+      ( get-object-y "Freighter One" ) 
+      ( get-object-z "Freighter One" ) 
+      30000 
+      1000 
+      300 
+      100 
+      300 
+      500 
+      2 
+      7 
+   )
 )
 +Name: Kamikaze explode
 +Repeat Count: 1
 +Interval: 1
 +Chained: 0
+
+$Formula: ( when 
+   ( is-destroyed-delay 
+      0 
+      "Freighter One" 
+   )
+   ( explosion-effect 
+      ( get-object-x "Cargo One" ) 
+      ( get-object-y "Cargo One" ) 
+      ( get-object-z "Cargo One" ) 
+      30000 
+      1000 
+      300 
+      100 
+      300 
+      500 
+      2 
+      7 
+   )
+   ( send-message 
+      "#Command" 
+      "High" 
+      "Coll. check" 
+   )
+)
++Name: Kamikaze on destroy
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-cargo-known-delay 3 "Cargo One" ) 
+   ( change-iff 
+      "Hostile" 
+      "Freighter One" 
+   )
+   ( change-iff "Hostile" "Cargo One" ) 
+)
++Name: Bomb scan
++Repeat Count: 1
++Interval: 1
 
 #Goals		;! 1 total
 
