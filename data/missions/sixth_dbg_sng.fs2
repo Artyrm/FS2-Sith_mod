@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/29/18 at 04:11:54
+$Modified: 08/29/18 at 04:49:19
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -157,8 +157,8 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "player-start" "invulnerable" "hidden-from-sensors" "stealth" "friendly-stealth-invisible" )
-+Flags2: ( "cloaked" "no-collide" )
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( )
 +Respawn priority: 0
 +Group: 0
 +Score: 8
@@ -365,7 +365,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "no-shields" "no-dynamic" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -875,7 +875,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "no-arrival-warp" )
++Flags: ( "no-shields" "no-arrival-warp" "no-dynamic" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -916,7 +916,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "no-arrival-warp" )
++Flags: ( "no-shields" "no-arrival-warp" "no-dynamic" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -1512,7 +1512,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	-0.000000, -0.000000, 1.000000
 $AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
+$Cargo 1:  XSTR("Crew", -1)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
@@ -2097,7 +2097,7 @@ $Formula: ( when
       ( true ) 
       0 
       0 
-      61 
+      64 
       ( true ) 
    )
    ( change-iff 
@@ -2172,10 +2172,7 @@ $Formula: ( when
 +Chained: 0
 
 $Formula: ( when 
-   ( is-destroyed-delay 
-      0 
-      "Freighter One" 
-   )
+   ( false ) 
    ( explosion-effect 
       ( get-object-x "Cargo One" ) 
       ( get-object-y "Cargo One" ) 
@@ -2194,6 +2191,13 @@ $Formula: ( when
       "High" 
       "Coll. check" 
    )
+   ( when 
+      ( is-destroyed-delay 
+         0 
+         "Freighter One" 
+      )
+      ( do-nothing ) 
+   )
 )
 +Name: Kamikaze on destroy
 +Repeat Count: 1
@@ -2201,10 +2205,6 @@ $Formula: ( when
 
 $Formula: ( when 
    ( is-cargo-known-delay 3 "Cargo One" ) 
-   ( change-iff 
-      "Hostile" 
-      "Freighter One" 
-   )
    ( change-iff "Hostile" "Cargo One" ) 
 )
 +Name: Bomb scan

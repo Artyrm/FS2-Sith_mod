@@ -2044,6 +2044,7 @@ $Expl outer rad:    0.0
 $Expl damage:           0.0
 $Expl blast:        0.0
 $Expl Propagates:       YES                                                     ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Base Death-Roll Time:	500
 $Shockwave Speed:       0.0                                             ;; speed shockwave expands at, 0 means no shockwave
 $Default PBanks:        ()
 $Default SBanks:        ()
