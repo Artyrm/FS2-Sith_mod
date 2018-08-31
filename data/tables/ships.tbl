@@ -2835,7 +2835,7 @@ $Subsystem:                     turret08, 0.643, 1.0
 			
 $Subsystem:                     turret09, 0.643, 1.0
 		$Alt Subsystem Name:						     Turret Launcher
-        $Default sBanks:                                ( "Standart Flak" )
+        $Default sBanks:                                ( "Standard Flak" )
 		$RotationSnd:		254		
 		$Turret Base RotationSnd:	254
 		$Turret Gun RotationSnd:	255
@@ -2990,6 +2990,8 @@ $EngineSnd:						128                   ;; Engine sound of ship
 $Closeup_pos:					0.0, 0.0, -1315
 $Closeup_zoom:					0.5
 $Score:							100
+$Radar Image 2D:				radar-bigship
+$3D Radar Blip Size Multiplier:	0.67
 ;$Subsystem:                     sensors,                         4, 0
 ;$Subsystem:                     communication,  4, 0.0
 ;$Subsystem:                     navigation,              4, 0.0

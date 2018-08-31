@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/29/18 at 04:49:19
+$Modified: 08/29/18 at 14:41:01
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -24,9 +24,9 @@ $end_multi_text
 
 +Viewer pos: -5060.157715, 2024.808228, 6408.097168
 +Viewer orient:
-	-0.442916, -0.000002, -0.896563,
-	0.158332, 0.984283, -0.078221,
-	0.882472, -0.176600, -0.435954
+	-0.775306, -0.000001, -0.631586,
+	0.176260, 0.960269, -0.216370,
+	0.606493, -0.279076, -0.744502
 
 
 $Skybox Model: frozenhurricanebox.pof
@@ -1741,7 +1741,7 @@ $Ships: (		;! 4 total
 	"Gold Two 3"
 	"Gold Two 4"
 )
-$AI Goals: ( goals ( ai-disarm-ship "Impassioned" 56 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 56 ) )
 +Flags: ( "no-dynamic" )
 
 $Name: Gold Three
