@@ -2020,6 +2020,55 @@ $Subsystem:                     sensors,                        3,       0.0
 $Subsystem:                     engine,                 5,               0.0
 
 
+$Name:                          GTDR Amazon Advanced#Fast
+$Short name:            TDrone2
+$Species:                       Terran
++Tech Description:
+XSTR("The GTDr Amazon Advanced Model VII was an unmanned combat drone used for advanced flight combat training. It was larger, smarter, and more heavily armored than the basic Amazon drone. As with the basic Amazon, these are now encountered only in the virtual battlefields of the TSM training module series. The Model VII is used to simulate assaults on enemy capital ships, training fighter and bomber pilots to target turrets and ship subsystems. Command has found that virtual training against Model VIIs increases the survival rate of pilots by 37% when attacking capital ships.", 3036)
+$end_multi_text
+$POF file:                      Drone02.pof
+$Detail distance:       (0, 300, 750, 3000)
+$Show damage:           YES
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.7
+$Max Velocity:          0.0, 0.0, 600.0
+$Rotation time:         25.0, 25.0, 25.0
+$Rear Velocity:         0.0
+$Forward accel:         7.0
+$Forward decel:         1.5
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Expl inner rad:        0.0
+$Expl outer rad:    0.0
+$Expl damage:           0.0
+$Expl blast:        0.0
+$Expl Propagates:       YES                                                     ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Base Death-Roll Time:	500
+$Shockwave Speed:       0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Default PBanks:        ()
+$Default SBanks:        ()
+$SBank Capacity:        ()
+;$Shields:                      0
+$Shields:                       0
+$Power Output:          1.0
+$Max Oclk Speed:        60.0
+$Max Weapon Eng:        0.0
+$Hitpoints:                     5000
+$Flags:                         ( "freighter" "in tech database")
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       127                   ;; Engine sound of ship
+$Closeup_pos:           0.0, 19.0, -190
+$Closeup_zoom:          0.5
+$Subsystem:                     communication,  2,               0.0
+$Subsystem:                     weapons,                        3,               0.0
+$Subsystem:                     sensors,                        3,       0.0
+$Subsystem:                     engine,                 5,               0.0
+
+
 $Name:                          @GTS Hygeia
 $Short name:            TSup
 $Species:                       Terran
@@ -2786,7 +2835,7 @@ $Subsystem:                     turret08, 0.643, 1.0
 			
 $Subsystem:                     turret09, 0.643, 1.0
 		$Alt Subsystem Name:						     Turret Launcher
-        $Default sBanks:                                ( "Standart Flak" )
+        $Default sBanks:                                ( "Standard Flak" )
 		$RotationSnd:		254		
 		$Turret Base RotationSnd:	254
 		$Turret Gun RotationSnd:	255
@@ -2941,6 +2990,8 @@ $EngineSnd:						128                   ;; Engine sound of ship
 $Closeup_pos:					0.0, 0.0, -1315
 $Closeup_zoom:					0.5
 $Score:							100
+$Radar Image 2D:				radar-bigship
+$3D Radar Blip Size Multiplier:	0.67
 ;$Subsystem:                     sensors,                         4, 0
 ;$Subsystem:                     communication,  4, 0.0
 ;$Subsystem:                     navigation,              4, 0.0
