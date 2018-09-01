@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/29/18 at 04:49:19
+$Modified: 09/01/18 at 23:59:55
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -24,9 +24,9 @@ $end_multi_text
 
 +Viewer pos: -5060.157715, 2024.808228, 6408.097168
 +Viewer orient:
-	-0.442916, -0.000002, -0.896563,
-	0.158332, 0.984283, -0.078221,
-	0.882472, -0.176600, -0.435954
+	-0.775306, -0.000001, -0.631586,
+	0.176260, 0.960269, -0.216370,
+	0.606493, -0.279076, -0.744502
 
 
 $Skybox Model: frozenhurricanebox.pof
@@ -1201,7 +1201,6 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret25" 50 ) ( ai-destroy-subsystem "Impassioned" "turret26" 50 ) ( ai-destroy-subsystem "Impassioned" "turret27" 50 ) ( ai-destroy-subsystem "Impassioned" "turret28" 50 ) ( ai-destroy-subsystem "Impassioned" "turret12" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1229,7 +1228,6 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret25" 50 ) ( ai-destroy-subsystem "Impassioned" "turret26" 50 ) ( ai-destroy-subsystem "Impassioned" "turret27" 50 ) ( ai-destroy-subsystem "Impassioned" "turret28" 50 ) ( ai-destroy-subsystem "Impassioned" "turret12" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1257,7 +1255,6 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret25" 50 ) ( ai-destroy-subsystem "Impassioned" "turret26" 50 ) ( ai-destroy-subsystem "Impassioned" "turret27" 50 ) ( ai-destroy-subsystem "Impassioned" "turret28" 50 ) ( ai-destroy-subsystem "Impassioned" "turret12" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1285,7 +1282,6 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret25" 50 ) ( ai-destroy-subsystem "Impassioned" "turret26" 50 ) ( ai-destroy-subsystem "Impassioned" "turret27" 50 ) ( ai-destroy-subsystem "Impassioned" "turret28" 50 ) ( ai-destroy-subsystem "Impassioned" "turret12" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1720,8 +1716,8 @@ $Ships: (		;! 4 total
 	"Gold One 3"
 	"Gold One 4"
 )
-$AI Goals: ( goals ( ai-disable-ship "Impassioned" 50 ) )
-+Flags: ( )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) )
++Flags: ( "no-dynamic" )
 
 $Name: Gold Two
 $Waves: 1
@@ -1741,7 +1737,6 @@ $Ships: (		;! 4 total
 	"Gold Two 3"
 	"Gold Two 4"
 )
-$AI Goals: ( goals ( ai-disarm-ship "Impassioned" 56 ) )
 +Flags: ( "no-dynamic" )
 
 $Name: Gold Three
@@ -1762,8 +1757,7 @@ $Ships: (		;! 4 total
 	"Gold Three 3"
 	"Gold Three 4"
 )
-$AI Goals: ( goals ( ai-disarm-ship "Impassioned" 50 ) )
-+Flags: ( )
++Flags: ( "no-dynamic" )
 
 $Name: Gamma
 $Waves: 1
