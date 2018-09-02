@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/29/18 at 14:41:01
+$Modified: 09/02/18 at 16:11:29
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -1720,8 +1720,8 @@ $Ships: (		;! 4 total
 	"Gold One 3"
 	"Gold One 4"
 )
-$AI Goals: ( goals ( ai-disable-ship "Impassioned" 50 ) )
-+Flags: ( )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) )
++Flags: ( "no-dynamic" )
 
 $Name: Gold Two
 $Waves: 1
@@ -1741,7 +1741,6 @@ $Ships: (		;! 4 total
 	"Gold Two 3"
 	"Gold Two 4"
 )
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 56 ) )
 +Flags: ( "no-dynamic" )
 
 $Name: Gold Three
@@ -1762,7 +1761,6 @@ $Ships: (		;! 4 total
 	"Gold Three 3"
 	"Gold Three 4"
 )
-$AI Goals: ( goals ( ai-disarm-ship "Impassioned" 50 ) )
 +Flags: ( )
 
 $Name: Gamma
