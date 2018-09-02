@@ -2553,7 +2553,7 @@ $Max Weapon Eng:        0.0
 $Hitpoints:                     200000
 $Subsystem Repair Rate:		1.0
 $Flags:                         (  "drydock" "in tech database" "intrinsic no shields"  )
-$AI Class:                      SW None
+$AI Class:                      None
 $Afterburner:           NO
 $Countermeasures:       0
 $Scan time:                     2000

@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("5. Fly to Nago Sedow", -1)
 $Author: Eldaron
 $Created: 07/20/18 at 18:07:34
-$Modified: 09/03/18 at 01:40:40
+$Modified: 09/03/18 at 01:25:01
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -28,11 +28,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 1476.049316, 3484.822998, 434.896301
++Viewer pos: -211.401657, 438.534424, 727.676575
 +Viewer orient:
-	0.078485, 0.000000, 0.996915,
-	-0.902433, 0.424932, 0.071047,
-	-0.423621, -0.905225, 0.033351
+	-0.946414, -0.000000, 0.322957,
+	-0.172073, 0.846238, -0.504255,
+	-0.273298, -0.532806, -0.800891
 
 
 $AI Profile: FS2 RETAIL
@@ -461,15 +461,17 @@ $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
++Initial Shields: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "no-shields" )
 +Flags2: ( )
 +Respawn priority: 0
++Group: 0
 +Use Table Score:
 +Score: 8
 
