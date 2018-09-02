@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 08/29/18 at 01:56:15
+$Modified: 09/02/18 at 17:29:01
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -18,8 +18,11 @@ $end_multi_text
 
 +Fog Far Mult: 1.000000
 
-+Num Players: 2
+
++Num Players: 6
+
 +Num Respawns: 0
+
 +Max Respawn Time: -1
 +Disallow Support: 0
 +Hull Repair Ceiling: 0.000000
@@ -91,13 +94,13 @@ $end_briefing
 
 $Num stages: 0
 
-#Players		;! 2 total
+#Players		;! 6 total
 
 $Starting Shipname: Alpha 1
 $Ship Choices: (
 	"GTF Pegasus"	5
-	"GTF Pegasus."	5
-	"GTNB Pharos."	5
+	"GTF Pegasus."	10
+	"GTNB Pharos."	10
 )
 
 +Weaponry Pool: (
@@ -160,8 +163,8 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "player-start" "invulnerable" "hidden-from-sensors" "stealth" "friendly-stealth-invisible" )
-+Flags2: ( "cloaked" "no-collide" )
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( )
 +Respawn priority: 0
 +Group: 0
 +Score: 8
@@ -1315,6 +1318,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Coward
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -1324,7 +1328,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "player-start" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1340,6 +1344,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Coward
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -1349,7 +1354,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "player-start" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1365,6 +1370,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Coward
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -1374,7 +1380,7 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
++Flags: ( "cargo-known" "player-start" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1390,6 +1396,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Coward
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -1399,8 +1406,8 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
++Flags: ( "cargo-known" "player-start" "invulnerable" "hidden-from-sensors" "stealth" "friendly-stealth-invisible" )
++Flags2: ( "hide-ship-name" "cloaked" "no-collide" )
 +Respawn priority: 0
 +Group: 0
 +Use Table Score:
