@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 09/02/18 at 22:24:02
+$Modified: 09/02/18 at 23:49:00
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -22,11 +22,11 @@ $end_multi_text
 +Hull Repair Ceiling: 0.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: -5060.157715, 2024.808228, 6408.097168
++Viewer pos: -24027.994141, 5521.124023, 4588.733398
 +Viewer orient:
-	-0.775306, -0.000001, -0.631586,
-	0.176260, 0.960269, -0.216370,
-	0.606493, -0.279076, -0.744502
+	-0.056922, -0.000001, -0.998379,
+	0.145523, 0.989320, -0.008298,
+	0.987716, -0.145759, -0.056314
 
 
 $Skybox Model: frozenhurricanebox.pof
@@ -978,7 +978,7 @@ $Determination: 10
 $Name: Gold One 1		;! Object #29
 $Class: GTB Zeus
 $Team: Hostile
-$Location: -11774.097656, 0.000179, -303.283569
+$Location: 1929.208984, 5000.000000, -519.009888
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1005,7 +1005,7 @@ $Determination: 10
 $Name: Gold One 2		;! Object #30
 $Class: GTB Zeus
 $Team: Hostile
-$Location: -11630.728516, 0.000474, -267.783447
+$Location: 2072.577637, 5000.000488, -483.509888
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1032,7 +1032,7 @@ $Determination: 10
 $Name: Gold One 3		;! Object #31
 $Class: GTB Zeus
 $Team: Hostile
-$Location: -11755.305664, 0.000193, -574.981079
+$Location: 1948.000000, 5000.000000, -790.700012
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1059,7 +1059,7 @@ $Determination: 10
 $Name: Gold One 4		;! Object #32
 $Class: GTB Zeus
 $Team: Hostile
-$Location: -11612.372070, 0.000666, -556.052368
+$Location: 2090.933105, 5000.000488, -771.778137
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1707,9 +1707,7 @@ $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Gold One 1
 
-$Arrival Location: In front of ship
-+Arrival Distance: 428
-$Arrival Anchor: Hope
+$Arrival Location: Hyperspace
 +Arrival delay: 50
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -1720,7 +1718,7 @@ $Ships: (		;! 4 total
 	"Gold One 3"
 	"Gold One 4"
 )
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) ( ai-destroy-subsystem "Impassioned" "turret25" 48 ) )
+$AI Goals: ( goals ( ai-waypoints-once "Target waypoint for t25" 50 ) ( ai-destroy-subsystem "Impassioned" "turret25" 50 ) )
 +Flags: ( "no-dynamic" )
 
 $Name: Gold Two
@@ -1800,7 +1798,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 +Flags: ( )
 
-#Events		;! 15 total
+#Events		;! 17 total
 
 $Formula: ( when 
    ( false ) 
@@ -2012,6 +2010,72 @@ $Formula: ( when
 $Formula: ( when 
    ( true ) 
    ( set-object-position 
+      "Target waypoint for t25:1" 
+      ( get-object-x 
+         "Impassioned" 
+         "<none>" 
+         1000 
+      )
+      ( get-object-y 
+         "Impassioned" 
+         "<none>" 
+         0 
+         3000 
+      )
+      ( get-object-z 
+         "Impassioned" 
+         "<none>" 
+         0 
+         0 
+         200 
+      )
+   )
+   ( when 
+      ( true ) 
+      ( add-nav-waypoint 
+         "T25" 
+         "Target waypoint for t25" 
+         1 
+      )
+   )
+)
++Name: WP to follow SD t25
++Repeat Count: 999999
++Interval: 1
+
+$Formula: ( when 
+   ( <= 
+      ( distance 
+         "Gold One" 
+         "Target waypoint for t25:1" 
+      )
+      200 
+   )
+   ( when 
+      ( true ) 
+      ( send-message 
+         "Gold One 1" 
+         "High" 
+         "Bombers attack" 
+      )
+   )
+   ( clear-goals "Gold One" ) 
+   ( add-goal 
+      "Gold One" 
+      ( ai-destroy-subsystem 
+         "Impassioned" 
+         "turret26" 
+         89 
+      )
+   )
+)
++Name: Bombers attack t25
++Repeat Count: 999999
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( set-object-position 
       "To the bot of SD:1" 
       ( get-object-x 
          "Impassioned" 
@@ -2218,7 +2282,7 @@ $end_multi_text
 $Formula: ( ship-type-destroyed 100 "Cruiser" ) 
 +Score: 100
 
-#Waypoints		;! 6 lists total
+#Waypoints		;! 7 lists total
 
 $Name: To the right from SD
 $List: (		;! 1 points in list
@@ -2250,7 +2314,12 @@ $List: (		;! 1 points in list
 	( -5635.107910, 0.000063, 2099.184814 )
 )
 
-#Messages		;! 6 total
+$Name: Target waypoint for t25
+$List: (		;! 1 points in list
+	( -579.599976, 3000.000000, 1337.699951 )
+)
+
+#Messages		;! 7 total
 
 
 $Name: Warn dist Hope
@@ -2283,6 +2352,11 @@ $end_multi_text
 $Name: Coll. check
 $Team: -1
 $MessageNew:  XSTR("I'm in!", -1)
+$end_multi_text
+
+$Name: Bombers attack
+$Team: -1
+$MessageNew:  XSTR("Attack!", -1)
 $end_multi_text
 
 #Reinforcements		;! 0 total
