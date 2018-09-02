@@ -2,9 +2,9 @@
 
 $Version: 0.10
 $Name:  XSTR("5. Fly to Nago Sedow", -1)
-$Author: Eldaron
+$Author: Eldaron, ksotar
 $Created: 07/20/18 at 18:07:34
-$Modified: 09/03/18 at 01:25:01
+$Modified: 09/03/18 at 02:15:43
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -30,7 +30,7 @@ $end_multi_text
 
 +Viewer pos: -211.401657, 438.534424, 727.676575
 +Viewer orient:
-	-0.946414, -0.000000, 0.322957,
+	-0.946414, 0.000000, 0.322956,
 	-0.172073, 0.846238, -0.504255,
 	-0.273298, -0.532806, -0.800891
 
@@ -72,15 +72,15 @@ $Ship Choices: (
 )
 
 +Weaponry Pool: (
-	"Subach HL-7"	17
+	"Subach HL-7"	16
 	"Subach HL-D"	16
 	"Mekhu HL-7"	16
 	"Mekhu HL-7D"	16
 	"Akheton SDG"	16
 	"Morning Star"	16
 	"MorningStar D"	16
-	"Prometheus R"	17
-	"Prometheus S"	16
+	"Prometheus R"	16
+	"Prometheus S"	17
 	"Prometheus D"	16
 	"Maxim"	16
 	"Maxim D"	16
@@ -96,7 +96,7 @@ $Ship Choices: (
 	"Hornet D"	500
 	"Tornado"	500
 	"Tornado D"	500
-	"Harpoon"	516
+	"Harpoon"	512
 	"Harpoon D"	500
 	"Trebuchet"	500
 	"TAG-A"	500
@@ -114,7 +114,7 @@ $Ship Choices: (
 #Objects		;! 14 total
 
 $Name: Alpha 1		;! Object #0
-$Class: GTF Ulysses
+$Class: GTF Pegasus
 $Team: Friendly
 $Location: -359.179596, -0.000022, -743.892395
 $Orientation:
@@ -123,7 +123,6 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
 $Arrival Location: Hyperspace
@@ -131,11 +130,10 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "player-start" )
++Flags: ( "cargo-known" "player-start" "no-departure-warp" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 $Name: SF Dragon 1		;! Object #1
@@ -484,19 +482,57 @@ $Special Ship: 0		;! Alpha 1
 
 $Arrival Location: Hyperspace
 $Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
+$Departure Location: Docking Bay
+$Departure Anchor: Asteroid Hangar 13
 $Departure Cue: ( false ) 
 $Ships: (		;! 1 total
 	"Alpha 1"
 )
 +Hotkey: 0
-+Flags: ( )
++Flags: ( "no-departure-warp" )
 
-#Events		;! 0 total
+#Events		;! 2 total
 
+$Formula: ( when 
+   ( <= 
+      ( distance-ship-subsystem 
+         "Alpha 1" 
+         "Asteroid Hangar 13" 
+         "Fighterbay" 
+      )
+      5 
+   )
+   ( when 
+      ( true ) 
+      ( send-message 
+         "Asteroid Hangar 13" 
+         "High" 
+         "Docked" 
+      )
+   )
+)
++Name: Safe landing
++Repeat Count: 1
++Interval: 1
 
-#Goals		;! 0 total
+$Formula: ( when ( true ) ( end-mission ) ) 
++Name: Event name
++Repeat Count: 1
++Interval: 1
++Chained: 5
 
+#Goals		;! 1 total
+
+$Type: Primary
++Name: Safe landing
+$MessageNew:  XSTR("You have reached Nar Sedow", -1)
+$end_multi_text
+$Formula: ( has-docked-delay 
+   "Alpha 1" 
+   "Asteroid Hangar 13" 
+   1 
+   0 
+)
 
 #Waypoints		;! 1 lists total
 
@@ -509,8 +545,13 @@ $List: (		;! 5 points in list
 	( 3540.876709, 0.000232, 3144.303223 )
 )
 
-#Messages		;! 0 total
+#Messages		;! 1 total
 
+
+$Name: Docked
+$Team: -1
+$MessageNew:  XSTR("Welcome on board", -1)
+$end_multi_text
 
 #Reinforcements		;! 0 total
 
