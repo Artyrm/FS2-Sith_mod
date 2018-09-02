@@ -2457,6 +2457,124 @@ $Closeup_pos:           0.0, 0.0, -86
 $Closeup_zoom:          0.25
 $Score:					5
 
+$Name:                          Asteroid Hangar
+$Short name:            		Asteroid Hangar
+$Species:                       Terran
++Type:                          XSTR("Hangar", -1)
++Maneuverability:       		XSTR("Bad", -1)
++Armor:                         XSTR("Average", -1)
++Manufacturer:          		XSTR("Pitz Co.", -1)
++Description:					XSTR("Asteroid Hangar", -1)
+$end_multi_text
++Tech Description:				XSTR("The Hangar is a medium sized hangar that is specifcially modified to be built into an asteroid.", -1)
+$end_multi_text
+$POF file:                      asteroidHangar.pof
+$POF Target LOD:                0
+$Detail distance:       (0, 100, 600)
+;$ND:							42, 42, 224
+$Show damage:           NO
+$Damage Lightning Type:			None
+$Impact Spew:
++Max particles:					40
++Min particles:					20
++Max Radius:					0.6						; 0.5f
++Min Radius:					0.2						; 0.2f
++Max Lifetime:					0.8						; 0.55f
++Min Lifetime:					0.2						; 0.05f
++Max Velocity:					50						; 12.0f
++Min Velocity:					35						; 2.0f
++Normal Variance:				0.2
+$Damage Spew:											; Controls the 'smoke' released on weapon impact point, Certain default values (marked with X) gain a specific multiplier based on ship radius,  If the radius is less than 20 the multiplier is 1. If the radius is larger than 40 the multipler is 1.2 Otherwise it is between 1 and 1.2
++Max Particles:					70						; X
++Min Particles:					30						; X
++Max Radius:					2.0						; X	
++Min Radius:					1.0						; X
++Max Lifetime:					3.0						; X
++Min Lifetime:					1.0						; X
++Max Velocity:					25						; X
++Min Velocity:					10						; X
++Normal Variance:				0.02					; X
+$Debris:
++Min Lifetime:					1					; float, seconds
++Max Lifetime:					10					; float, seconds 
++Min Speed:						0.1					; float, m/s
++Max Speed:						1					; float, m/s
++Min Rotation speed:			6					; Defines the minimum rotational speed of the debris, Default is (6 to 10)/Ship-radius
++Max Rotation speed:			10					; float, rad/sec
++Min Hitpoints:					5					; float
++Max Hitpoints:					10					; float
++Damage Multiplier:				0.3					; float
++Lightning Arc Percent:			10					; float, 0-100, Controls what percent of debris pieces will have the damage lightning effect applied to them. Default is 50% 
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.2
+$Banking Constant:				0.0
+$Max Velocity:          0.0, 0.0, 0.0                  ;; in x/y/z -- z only specified forward.  use special tokens for backward movement
+$Rotation time:         20.0, 22.0, 22.0
+$Rear Velocity:         0.0
+$Forward accel:         1.0
+$Forward decel:         1.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Glide:					NO
+$Expl inner rad:        100.0
+$Expl outer rad:        3500.0
+$Expl damage:           30.0
+$Expl blast:            3500.0
+$Expl Propagates:       YES                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Propagating Expl Radius Multiplier:		1.1
+$Death FX Explosion Radius Mult:		1.2					; Defines the multiplier applied to the ship death explosions
+$Death FX Explosion Count:				5					; Defines the number of explosion effect game uses when a large ship dies, default is 6. 
+$Ship Splitting Particles:				
++Max Particles:							120
++Min Particles:							60
++Max Velocity:							40
++Min Velocity:							20
++Normal Variance:						2
+$Ship Death Particles:
++Max Particles:							600
++Min Particles:							400
++Max Radius:							2.5
++Min Radius:							1.2
++Max Lifetime:							15.0
++Min Lifetime:							4
++Max Velocity:							60.0
++Min Velocity:							30.0
++Normal Variance:						2.0
+$Shockwave Speed:       0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Explosion Animations:					( 4, 5, 6 )		
+$Shields:                       0
+$Shield Color:		100 100 255
+$Power Output:          50.0
+$Shield Regeneration Rate:	0
+$Weapon Regeneration Rate:	0.0
+$Max Oclk Speed:        0.0
+$Max Weapon Eng:        0.0
+$Hitpoints:                     200000
+$Subsystem Repair Rate:		1.0
+$Flags:                         (  "drydock" "in tech database" "intrinsic no shields"  )
+$AI Class:                      SW None
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       Corvette_Engine.wav                   ;; Engine sound of ship
+$Closeup_pos:           0.0, 0.0, -1040
+$Closeup_zoom:          0.5
+$Shield_icon:           Shield_Asteroidbase
+;$Ship_icon:                     minixwing
+;$Ship_anim:                     demoxwing
+;$Ship_overhead: 				loadxwing
+$Score:             8
+$Radar Image 2D:				radar-asteroid
+$3D Radar Blip Size Multiplier:	0.85
+$Subsystem:             Fighterbay, 3, 0.0
+		$Alt Subsystem Name:	Fighterbay									
+		$Flags:					( "ignore if dead" "damage as hull" "allow landing" )
+$Subsystem:				communications, 0.5, 0
+	$Alt Subsystem Name:	Comm. Tower
+	$Flags:					( "ignore if dead" )
+
+;;=========================================================================================================================================================================================== 
 
 $Name:                          @GTC Fenris
 $Short name:					TCruise
