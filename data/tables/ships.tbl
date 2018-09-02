@@ -999,6 +999,7 @@ $Subsystem:                 navigation,                     10,0.0
 $Subsystem:                 engine,                         35,0.0
 
 
+
 $Name:                          GTF Perseus
 $Short name:                    TFight2t-03
 $Species:                       Terran
@@ -5767,7 +5768,7 @@ $Power Output:          0.0
 $Max Oclk Speed:        0.0
 $Max Weapon Eng:        0.0
 $Hitpoints:                     100
-$Flags:                         ("player_ship" "default_player_ship" "fighter")
+$Flags:                         ("player_ship" "default_player_ship" "navbuoy")
 $AI Class:                      Captain
 $Afterburner:           NO
 $Countermeasures:       0
@@ -5798,16 +5799,18 @@ $Expl damage:           0.0
 $Expl blast:            0.0
 $Expl Propagates:       NO                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
 $Shockwave Speed:       0.0                                             ;; speed shockwave expands at, 0 means no shockwave
-$Default PBanks:        ()
-$Default SBanks:        ()
-$SBank Capacity:        ()
+$Allowed PBanks:		( "Prometheus S" )
+$Default PBanks:        ( "Prometheus S" )
+$Allowed SBanks:		( "Harpoon" )
+$Default SBanks:        ( "Harpoon" )
+$SBank Capacity:        (3)  ;; Minimal availiable
 $Shields:                       0
 $Power Output:          0.0
 $Max Oclk Speed:        0.0
 $Max Weapon Eng:        0.0
 $Hitpoints:                     100
-$Flags:                         ("player_ship" "default_player_ship")
-$AI Class:                      Captain
+$Flags:                         ("player_ship" "default_player_ship" "fighter")
+$AI Class:                      None
 $Afterburner:           NO
 $Countermeasures:       0
 $Scan time:                     2000
