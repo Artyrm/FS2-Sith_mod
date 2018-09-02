@@ -1,7 +1,11 @@
-$Name:	45	Hyperspace_Lighter.wav,			0, 0.60, 1, 5000, 9000		; ** warp hole opening up for arriving (3d sound)
-$Name:	46	Hyperspace_Lighter.wav,			0, 0.60, 1, 5000, 9000		; ** warp hole opening up for departing (3d sound)
-$Name:	47	Hyperspace_Failed.wav,			0, 0.50, 0					; player warp has failed
-$Name:	50	Hyperspace_Start.wav,			0, 0.70, 0		; ship is warping out in 3rd person
-$Name:	61	Hyperspace_Start.wav,				0, 1.00, 1, 1500, 2000		; [obsolete] large ship warps out (looping 3d sound)
-$Name:	69	Hyperspace_Start.wav,		0, 1.00, 1, 6000, 10000		; capital warp hole opening (3d sound)
-$Name:	70	Hyperspace_Exit.wav,		0, 1.00, 1, 6000, 10000		; capital warp hole closing (3d sound)
+#Game Sounds Start
+
+$Name:	Hyperspace_Lighter Hyperspace_Lighter.wav,			0, 0.60, 1, 5000, 9000		; ** warp hole opening up for arriving (3d sound)
+$Name:	Hyperspace_Failed	Hyperspace_Failed.wav,			0, 0.50, 0					; player warp has failed
+$Name:	Hyperspace_Start	Hyperspace_Start.wav,			0, 0.70, 0		; ship is warping out in 3rd person
+$Name:	Hyperspace_Start_Cap	Hyperspace_Start.wav,		0, 1.00, 1, 6000, 10000		; capital warp hole opening (3d sound)
+$Name:	Hyperspace_Exit	Hyperspace_Exit.wav,		0, 1.00, 1, 6000, 10000		; capital warp hole closing (3d sound)
+$Name:  Corvette_Engine Corvette_Engine.wav,		0, 0.70, 1, 600, 1500		; Corvette Engine
+$Name:	MC_Engine MC_Engine.wav,				0, 0.70, 1, 800, 1500	
+
+#Game Sounds End

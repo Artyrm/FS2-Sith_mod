@@ -2558,7 +2558,7 @@ $AI Class:                      None
 $Afterburner:           NO
 $Countermeasures:       0
 $Scan time:                     2000
-$EngineSnd:       Corvette_Engine.wav                   ;; Engine sound of ship
+$EngineSnd:       Corvette_Engine                   ;; Engine sound of ship
 $Closeup_pos:           0.0, 0.0, -1040
 $Closeup_zoom:          0.5
 $Shield_icon:           Shield_Asteroidbase
@@ -2765,7 +2765,7 @@ $AI Class:                      Captain
 $Afterburner:           	NO
 $Countermeasures:				0
 $Scan time:                     4000
-$EngineSnd:						MC_Engine.wav                   ;; Engine sound of ship
+$EngineSnd:						MC_Engine                   ;; Engine sound of ship
 $Closeup_pos:					0.0, 0.0, -1115
 $Closeup_zoom:					0.5
 $Shield_icon:           Shield_Moncal
@@ -3859,7 +3859,7 @@ $AI Class:                      Captain
 $Afterburner:           NO
 $Countermeasures:       0
 $Scan time:                     2000
-$EngineSnd:       Corvette_Engine.wav                  ;; Engine sound of ship
+$EngineSnd:       Corvette_Engine                  ;; Engine sound of ship
 $Closeup_pos:           0.0, 0.0, -150
 $Closeup_zoom:          0.5
 $Shield_icon:           Shield_Bff1
@@ -7017,6 +7017,9 @@ $Closeup_zoom:          0.5
 $Name:                  GTNB Pharos.
 $Short name:            JBuoy
 $Species:               Terran
++Gun Mounts:				2
++Missile Banks:				1
+
 $POF file:              navbuoy.pof
 $Detail distance:       (0, 100, 5000)
 $Show damage:           YES
