@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("5. Fly to Nago Sedow", -1)
 $Author: Eldaron, ksotar
 $Created: 07/20/18 at 18:07:34
-$Modified: 09/03/18 at 02:15:43
+$Modified: 09/03/18 at 10:47:20
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -514,12 +514,14 @@ $Formula: ( when
 +Name: Safe landing
 +Repeat Count: 1
 +Interval: 1
++Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
 
 $Formula: ( when ( true ) ( end-mission ) ) 
 +Name: Event name
 +Repeat Count: 1
 +Interval: 1
 +Chained: 5
++Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
 
 #Goals		;! 1 total
 
@@ -550,7 +552,7 @@ $List: (		;! 5 points in list
 
 $Name: Docked
 $Team: -1
-$MessageNew:  XSTR("Welcome on board", -1)
+$MessageNew:  XSTR("Welcome on board, wait for docking...", -1)
 $end_multi_text
 
 #Reinforcements		;! 0 total
