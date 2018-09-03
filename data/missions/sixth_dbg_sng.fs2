@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 09/03/18 at 14:19:23
+$Modified: 09/03/18 at 17:03:43
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -13,7 +13,7 @@ $Mission Desc:
  XSTR("Defend Impassioned at all costs!", -1)
 $end_multi_text
 +Game Type Flags: 1
-+Flags: 131136
++Flags: 64
 +Fog Near Mult: 1.000000
 
 +Fog Far Mult: 1.000000
@@ -22,11 +22,11 @@ $end_multi_text
 +Hull Repair Ceiling: 80.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 5591.917480, 737.780151, 1617.669067
++Viewer pos: -10950.834961, 330.148712, 1749.570557
 +Viewer orient:
-	0.191914, -0.000001, 0.981412,
-	-0.143051, 0.989320, 0.027974,
-	-0.970930, -0.145761, 0.189864
+	0.014260, -0.000003, -0.999898,
+	0.279567, 0.960118, 0.003984,
+	0.960020, -0.279595, 0.013692
 
 
 $Skybox Model: frozenhurricanebox.pof
@@ -382,6 +382,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -408,6 +409,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -434,6 +436,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -454,12 +457,13 @@ $Determination: 10
 $Name: Red One 1		;! Object #12
 $Class: SF Dragon
 $Team: Hostile
-$Location: 8623.906250, 0.001076, -2901.601807
+$Location: -9331.099609, 3000.000000, -177.600006
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -486,6 +490,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -506,12 +511,13 @@ $Determination: 10
 $Name: Red One 2		;! Object #14
 $Class: SF Dragon
 $Team: Hostile
-$Location: 8550.212891, 0.012852, -2455.838135
+$Location: -9404.786133, 3000.011719, 268.149963
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -532,12 +538,13 @@ $Determination: 10
 $Name: Red One 3		;! Object #15
 $Class: SF Dragon
 $Team: Hostile
-$Location: 8803.310547, 0.005320, -2399.140869
+$Location: -9151.693359, 3000.003906, 324.899963
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -616,6 +623,7 @@ $Orientation:
 	-0.016935, 0.999856, -0.000760,
 	0.998851, 0.016952, 0.044817
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -668,6 +676,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -694,6 +703,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -720,6 +730,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -740,12 +751,13 @@ $Determination: 10
 $Name: Red One 4		;! Object #23
 $Class: SF Dragon
 $Team: Hostile
-$Location: 8405.285156, 0.011992, -2845.950439
+$Location: -9549.723633, 3000.010742, -121.912506
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -828,9 +840,10 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 0
 $Special Explosion:
 +Special Exp Damage: 200
 +Special Exp Blast: 3500
@@ -978,14 +991,14 @@ $Determination: 10
 $Name: Gold One 1		;! Object #29
 $Class: GTB Zeus
 $Team: Hostile
-$Location: 1929.208984, 5000.000000, -519.009888
+$Location: -6128.741699, -1000.000000, 2186.108154
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	0.279417, 0.000000, -0.960170,
+	0.399264, 0.909444, 0.116189,
+	0.873221, -0.415826, 0.254115
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret17" 50 ) ( ai-destroy-subsystem "Impassioned" "turret18" 50 ) ( ai-destroy-subsystem "Impassioned" "turret16" 50 ) ( ai-destroy-subsystem "Impassioned" "turret15" 50 ) ( ai-destroy-subsystem "Impassioned" "turret23" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1006,14 +1019,14 @@ $Determination: 10
 $Name: Gold One 2		;! Object #30
 $Class: GTB Zeus
 $Team: Hostile
-$Location: 2072.577637, 5000.000488, -483.509888
+$Location: -5985.366699, -999.999512, 2221.608154
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	0.280377, 0.000000, -0.959890,
+	0.407248, 0.905538, 0.118954,
+	0.869217, -0.424265, 0.253892
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret17" 50 ) ( ai-destroy-subsystem "Impassioned" "turret18" 50 ) ( ai-destroy-subsystem "Impassioned" "turret16" 50 ) ( ai-destroy-subsystem "Impassioned" "turret15" 50 ) ( ai-destroy-subsystem "Impassioned" "turret23" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1034,14 +1047,14 @@ $Determination: 10
 $Name: Gold One 3		;! Object #31
 $Class: GTB Zeus
 $Team: Hostile
-$Location: 1948.000000, 5000.000000, -790.700012
+$Location: -6109.991699, -1000.000000, 1914.420532
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	0.320453, 0.000000, -0.947264,
+	0.390538, 0.911057, 0.132116,
+	0.863012, -0.412280, 0.291951
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret17" 50 ) ( ai-destroy-subsystem "Impassioned" "turret18" 50 ) ( ai-destroy-subsystem "Impassioned" "turret16" 50 ) ( ai-destroy-subsystem "Impassioned" "turret15" 50 ) ( ai-destroy-subsystem "Impassioned" "turret23" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1062,14 +1075,14 @@ $Determination: 10
 $Name: Gold One 4		;! Object #32
 $Class: GTB Zeus
 $Team: Hostile
-$Location: 2090.933105, 5000.000488, -771.778137
+$Location: -5966.991699, -999.999512, 1933.358032
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	0.324819, 0.000000, -0.945776,
+	0.397452, 0.907414, 0.136502,
+	0.858210, -0.420239, 0.294745
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret17" 50 ) ( ai-destroy-subsystem "Impassioned" "turret18" 50 ) ( ai-destroy-subsystem "Impassioned" "turret16" 50 ) ( ai-destroy-subsystem "Impassioned" "turret15" 50 ) ( ai-destroy-subsystem "Impassioned" "turret23" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1097,7 +1110,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) ( ai-destroy-subsystem "Impassioned" "turret01" 50 ) ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) ( ai-destroy-subsystem "Impassioned" "turret03" 50 ) ( ai-destroy-subsystem "Impassioned" "turret04" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1125,7 +1138,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret01" 50 ) ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) ( ai-destroy-subsystem "Impassioned" "turret03" 50 ) ( ai-destroy-subsystem "Impassioned" "turret04" 50 ) ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1153,7 +1166,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) ( ai-destroy-subsystem "Impassioned" "turret03" 50 ) ( ai-destroy-subsystem "Impassioned" "turret04" 50 ) ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) ( ai-destroy-subsystem "Impassioned" "turret06" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1181,7 +1194,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret03" 50 ) ( ai-destroy-subsystem "Impassioned" "turret04" 50 ) ( ai-destroy-subsystem "Impassioned" "turret07" 50 ) ( ai-destroy-subsystem "Impassioned" "turret08" 50 ) ( ai-destroy-subsystem "Impassioned" "turret09" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1209,7 +1222,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) ( ai-destroy-subsystem "Impassioned" "turret06" 50 ) ( ai-destroy-subsystem "Impassioned" "turret07" 50 ) ( ai-destroy-subsystem "Impassioned" "turret08" 50 ) ( ai-destroy-subsystem "Impassioned" "turret46" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1237,7 +1250,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) ( ai-destroy-subsystem "Impassioned" "turret06" 50 ) ( ai-destroy-subsystem "Impassioned" "turret07" 50 ) ( ai-destroy-subsystem "Impassioned" "turret08" 50 ) ( ai-destroy-subsystem "Impassioned" "turret46" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1265,7 +1278,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) ( ai-destroy-subsystem "Impassioned" "turret06" 50 ) ( ai-destroy-subsystem "Impassioned" "turret07" 50 ) ( ai-destroy-subsystem "Impassioned" "turret08" 50 ) ( ai-destroy-subsystem "Impassioned" "turret46" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1293,7 +1306,7 @@ $Orientation:
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
 +AI Class: BP2-General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) )
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) ( ai-destroy-subsystem "Impassioned" "turret06" 50 ) ( ai-destroy-subsystem "Impassioned" "turret07" 50 ) ( ai-destroy-subsystem "Impassioned" "turret08" 50 ) ( ai-destroy-subsystem "Impassioned" "turret46" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1389,11 +1402,11 @@ $Determination: 10
 $Name: Gamma 4		;! Object #44
 $Class: GTF Pegasus
 $Team: Friendly
-$Location: -1022.869751, -0.002351, 3578.522705
+$Location: -351.100006, 500.000000, 3328.699951
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	-0.977993, 0.000000, -0.208638,
+	0.058469, 0.959930, -0.274073,
+	0.200278, -0.280240, -0.938805
 $AI Behavior: None
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
@@ -1412,7 +1425,7 @@ $Determination: 10
 +Score: 10
 
 $Name: Delta 1		;! Object #45
-$Class: GTF Pegasus
+$Class: GTF Myrmidon
 $Team: Friendly
 $Location: -407.701294, -0.002389, 4003.354492
 $Orientation:
@@ -1420,10 +1433,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Lieutenant
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon" "Harpoon" "Harpoon" )
++Sbank Ammo: ( 100 100 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1437,7 +1453,7 @@ $Determination: 10
 +Score: 10
 
 $Name: Delta 2		;! Object #46
-$Class: GTF Pegasus
+$Class: GTF Myrmidon
 $Team: Friendly
 $Location: -331.475525, -0.002390, 3998.310547
 $Orientation:
@@ -1445,10 +1461,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Lieutenant
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon" "Harpoon" "Harpoon" )
++Sbank Ammo: ( 100 100 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1462,7 +1481,7 @@ $Determination: 10
 +Score: 10
 
 $Name: Delta 3		;! Object #47
-$Class: GTF Pegasus
+$Class: GTF Myrmidon
 $Team: Friendly
 $Location: -248.208710, -0.002385, 4017.180664
 $Orientation:
@@ -1470,10 +1489,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Lieutenant
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon" "Harpoon" "Harpoon" )
++Sbank Ammo: ( 100 100 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1487,7 +1509,7 @@ $Determination: 10
 +Score: 10
 
 $Name: Delta 4		;! Object #48
-$Class: GTF Pegasus
+$Class: GTF Myrmidon
 $Team: Friendly
 $Location: -336.984497, -0.002386, 3922.054688
 $Orientation:
@@ -1495,10 +1517,13 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: Lieutenant
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
++Secondary Banks: ( "Harpoon" "Harpoon" "Harpoon" )
++Sbank Ammo: ( 100 100 0 )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
@@ -1766,7 +1791,7 @@ $Ships: (		;! 4 total
 	"Gold Three 3"
 	"Gold Three 4"
 )
-+Flags: ( )
++Flags: ( "no-dynamic" )
 
 $Name: Gamma
 $Waves: 1
@@ -1805,7 +1830,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 +Flags: ( )
 
-#Events		;! 18 total
+#Events		;! 19 total
 
 $Formula: ( when 
    ( false ) 
@@ -2046,6 +2071,22 @@ $Formula: ( when
 )
 +Name: WP to follow SD t25
 +Repeat Count: 999999
++Interval: 1
+
+$Formula: ( when 
+   ( true ) 
+   ( ship-guardian-threshold 
+      60 
+      "Impassioned" 
+   )
+   ( sabotage-subsystem 
+      "Impassioned" 
+      "turret32" 
+      101 
+   )
+)
++Name: First wave
++Repeat Count: 1
 +Interval: 1
 
 $Formula: ( when 
@@ -2339,7 +2380,7 @@ $List: (		;! 1 points in list
 
 $Name: To the bot of SD
 $List: (		;! 1 points in list
-	( -5635.107910, 0.000063, 2099.184814 )
+	( -2655.495605, 1999.998901, -1923.958008 )
 )
 
 $Name: Target waypoint for t25
