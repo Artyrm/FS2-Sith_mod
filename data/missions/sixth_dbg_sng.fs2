@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 09/03/18 at 17:03:43
+$Modified: 09/03/18 at 19:17:07
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -41,9 +41,10 @@ $AI Profile: FS2 RETAIL
 
 $Variables:
 (
-		0		"ISD_turrets_damage"		"0"		"number"
-		1		"time_counter"		"0"		"number"
-		2		"try"		"0"		"number"
+		0		"Gold-Two-1-missiles"		"0"		"number"
+		1		"ISD_turrets_damage"		"0"		"number"
+		2		"time_counter"		"0"		"number"
+		3		"try"		"0"		"number"
 )
 
 #Command Briefing
@@ -1830,7 +1831,7 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 +Flags: ( )
 
-#Events		;! 19 total
+#Events		;! 21 total
 
 $Formula: ( when 
    ( false ) 
@@ -2074,7 +2075,7 @@ $Formula: ( when
 +Interval: 1
 
 $Formula: ( when 
-   ( true ) 
+   ( has-arrived-delay 5 "Gold One" ) 
    ( ship-guardian-threshold 
       60 
       "Impassioned" 
@@ -2084,10 +2085,66 @@ $Formula: ( when
       "turret32" 
       101 
    )
+   ( modify-variable 
+      @Gold-Two-1-missiles[0] 
+      ( get-secondary-ammo "Gold Two 1" 0 ) 
+   )
 )
 +Name: First wave
 +Repeat Count: 1
 +Interval: 1
+
+$Formula: ( when 
+   ( < 
+      ( get-secondary-ammo "Gold Two 1" 0 ) 
+      @Gold-Two-1-missiles[0] 
+   )
+   ( modify-variable 
+      @Gold-Two-1-missiles[0] 
+      ( get-secondary-ammo "Gold Two 1" 0 ) 
+   )
+   ( send-message 
+      "#Command" 
+      "High" 
+      "Gold two missiles" 
+   )
+)
++Name: Print missiles
++Repeat Count: 999999
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( when 
+      ( = 
+         ( get-secondary-ammo "Gold Two 1" 0 ) 
+         0 
+      )
+      ( ship-no-guardian "Impassioned" ) 
+      ( add-goal 
+         "Gold One" 
+         ( ai-warp-out 89 ) 
+      )
+      ( add-goal 
+         "Gold Two" 
+         ( ai-warp-out 89 ) 
+      )
+      ( add-goal 
+         "Gold Three" 
+         ( ai-warp-out 89 ) 
+      )
+      ( send-message 
+         "#Command" 
+         "High" 
+         "Rockets depleted" 
+      )
+   )
+)
++Name: Bombers away
++Repeat Count: 999999
++Interval: 1
++Chained: 0
 
 $Formula: ( when 
    ( false ) 
@@ -2388,7 +2445,7 @@ $List: (		;! 1 points in list
 	( -579.599976, 3000.000000, 1337.699951 )
 )
 
-#Messages		;! 8 total
+#Messages		;! 10 total
 
 
 $Name: Warn dist Hope
@@ -2431,6 +2488,16 @@ $end_multi_text
 $Name: Turrets damaged
 $Team: -1
 $MessageNew:  XSTR("Turrets damaged for $ISD_turrets_damage", -1)
+$end_multi_text
+
+$Name: Rockets depleted
+$Team: -1
+$MessageNew:  XSTR("Rockets depleted", -1)
+$end_multi_text
+
+$Name: Gold two missiles
+$Team: -1
+$MessageNew:  XSTR("Gold two has $Gold-Two-1-missiles missiles", -1)
 $end_multi_text
 
 #Reinforcements		;! 0 total
