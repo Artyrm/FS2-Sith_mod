@@ -5741,7 +5741,7 @@ $Name:                  GTNB Pharos
 $Short name:            JBuoy
 $Species:               Terran
 $POF file:              navbuoy.pof
-$Detail distance:       (0, 100)
+$Detail distance:       (0, 100, 5000)
 $Show damage:           YES
 $Density:               1
 $Damp:                  0.2
@@ -5780,7 +5780,7 @@ $Name:                  GTNB Pharos.
 $Short name:            JBuoy
 $Species:               Terran
 $POF file:              navbuoy.pof
-$Detail distance:       (0, 100)
+$Detail distance:       (0, 100, 5000)
 $Show damage:           YES
 $Density:               1
 $Damp:                  0.2
