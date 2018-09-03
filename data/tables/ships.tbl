@@ -3099,7 +3099,7 @@ $Weapon Regeneration Rate:	0.35
 $Max Oclk Speed:				55.0
 $Max Weapon Eng:				200.0
 $Hitpoints:                     125000
-$Subsystem Repair Rate:		1.0
+$Subsystem Repair Rate:		0.0
 $Flags:                         ( "cruiser" "in tech database")
 $AI Class:                      Captain
 $Afterburner:					NO
