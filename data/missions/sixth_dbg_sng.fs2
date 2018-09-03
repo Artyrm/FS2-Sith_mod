@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 09/03/18 at 11:10:06
+$Modified: 09/03/18 at 14:19:23
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -984,8 +984,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
-$AI Goals: ( goals ( ai-disarm-ship "Impassioned" 50 ) )
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1012,8 +1012,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
-$AI Goals: ( goals ( ai-disarm-ship "Impassioned" 50 ) )
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1040,8 +1040,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
-$AI Goals: ( goals ( ai-disarm-ship "Impassioned" 50 ) )
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1068,8 +1068,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
-$AI Goals: ( goals ( ai-disarm-ship "Impassioned" 50 ) )
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1096,7 +1096,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1123,7 +1124,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1150,7 +1152,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1177,7 +1180,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1204,7 +1208,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1231,7 +1236,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1258,7 +1264,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1285,7 +1292,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1864,7 +1872,7 @@ $Formula: ( when
 +Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
 
 $Formula: ( when 
-   ( has-arrived-delay 10 "Gold One 1" ) 
+   ( has-arrived-delay 0 "Gold One 1" ) 
    ( good-secondary-time 
       "Hostile" 
       200 
