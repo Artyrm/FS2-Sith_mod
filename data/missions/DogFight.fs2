@@ -4,13 +4,13 @@ $Version: 0.10
 $Name:  XSTR("3. DogFight", -1)
 $Author: Eldaron
 $Created: 07/04/18 at 17:45:26
-$Modified: 08/16/18 at 13:20:12
+$Modified: 09/08/18 at 11:53:23
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
 
 $Mission Desc:
- XSTR("Fight", -1)
+ XSTR("Fight!", -1)
 $end_multi_text
 +Game Type Flags: 34
 +Flags: 0
@@ -21,7 +21,7 @@ $end_multi_text
 
 +Num Players: 8
 
-+Num Respawns: 3
++Num Respawns: 0
 
 +Max Respawn Time: -1
 +Disallow Support: 0
@@ -29,11 +29,11 @@ $end_multi_text
 +Subsystem Repair Ceiling: 100.000000
 +All Teams Attack
 
-+Viewer pos: -436.908417, 17596.742188, -24475.576172
++Viewer pos: -461.819183, 17601.837891, -24481.169922
 +Viewer orient:
-	0.999178, -0.000000, -0.040537,
-	0.024786, 0.791289, 0.610940,
-	0.032076, -0.611443, 0.790639
+	0.999178, -0.000001, -0.040537,
+	0.022005, 0.839846, 0.542379,
+	0.034044, -0.542825, 0.839155
 
 
 $Skybox Model: frozenhurricanebox.pof
@@ -59,69 +59,19 @@ $Num stages: 0
 
 $Starting Shipname: Alpha 1
 $Ship Choices: (
-	"GTF Ulysses"	5
-	"GTF Hercules"	5
-	"GTF Hercules Mark II"	5
-	"GTF Ares"	5
-	"GTF Erinyes"	5
-	"GTF Loki"	5
 	"GTF Pegasus"	5
-	"GTF Perseus"	5
-	"GTF Myrmidon"	5
-	"SF Mara (terrans)"	5
-	"GTB Artemis"	5
-	"GTB Artemis D.H."	5
-	"GTB Medusa"	5
-	"GTB Ursa"	5
-	"GTB Zeus"	5
-	"GTB Boanerges"	5
-	"GVF Ptah"	5
+	"GTF Pegasus."	5
 )
 
 +Weaponry Pool: (
-	"Subach HL-7"	16
-	"Subach HL-D"	24
-	"Mekhu HL-7"	16
-	"Mekhu HL-7D"	16
-	"Akheton SDG"	16
-	"Morning Star"	16
-	"MorningStar D"	16
-	"Prometheus R"	16
-	"Prometheus S"	16
-	"Prometheus D"	16
-	"Maxim"	16
-	"Maxim D"	16
-	"UD-8 Kayser"	16
-	"UD-D Kayser"	16
-	"Circe"	16
-	"Lamprey"	16
-	"Rockeye"	500
-	"Rockeye D"	500
-	"Tempest"	500
-	"Tempest D"	500
-	"Hornet"	500
-	"Hornet D"	500
-	"Tornado"	500
-	"Tornado D"	500
-	"Harpoon"	628
-	"Harpoon D"	500
-	"Trebuchet"	500
-	"TAG-A"	500
-	"TAG-B"	500
-	"Piranha"	500
-	"Stiletto II"	500
-	"Infyrno"	500
-	"Infyrno D"	500
-	"Cyclops"	500
-	"Cyclops#short"	500
-	"Helios"	500
-	"EMP Adv."	500
+	"Prometheus S"	24
+	"Harpoon"	596
 )
 
-#Objects		;! 8 total
+#Objects		;! 9 total
 
 $Name: Alpha 1		;! Object #0
-$Class: GTF Ulysses
+$Class: GTF Pegasus
 $Team: Friendly
 $Location: -9618.835938, 0.000320, -3023.009033
 $Orientation:
@@ -131,24 +81,21 @@ $Orientation:
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Subach HL-D" "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 $Name: Alpha 2		;! Object #1
-$Class: GTF Ulysses
+$Class: GTF Pegasus
 $Team: Friendly
 $Location: -10040.913086, -0.000249, 6884.966797
 $Orientation:
@@ -158,24 +105,21 @@ $Orientation:
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Subach HL-D" "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 $Name: Alpha 3		;! Object #2
-$Class: GTF Ulysses
+$Class: GTF Pegasus
 $Team: Friendly
 $Location: -4694.200684, -0.000037, 10582.012695
 $Orientation:
@@ -185,24 +129,21 @@ $Orientation:
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Subach HL-D" "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 $Name: Alpha 4		;! Object #3
-$Class: GTF Ulysses
+$Class: GTF Pegasus
 $Team: Friendly
 $Location: 2181.636719, -0.000098, 10886.403320
 $Orientation:
@@ -212,24 +153,21 @@ $Orientation:
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Subach HL-D" "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 $Name: Beta 1		;! Object #4
-$Class: GTF Ulysses
+$Class: GTF Pegasus
 $Team: Friendly
 $Location: 6999.786133, -0.000040, 4063.866943
 $Orientation:
@@ -239,24 +177,21 @@ $Orientation:
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Subach HL-D" "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 $Name: Beta 2		;! Object #5
-$Class: GTF Ulysses
+$Class: GTF Pegasus
 $Team: Friendly
 $Location: 6852.238770, -0.000064, -2900.666016
 $Orientation:
@@ -266,26 +201,23 @@ $Orientation:
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Subach HL-D" "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 $Name: Beta 3		;! Object #6
-$Class: GTF Ulysses
+$Class: GTF Pegasus
 $Team: Friendly
-$Location: 4951.396973, 0.001529, -10696.671875
+$Location: 4401.365234, 0.002571, -9149.956055
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -293,26 +225,23 @@ $Orientation:
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Subach HL-D" "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 $Name: Beta 4		;! Object #7
-$Class: GTF Ulysses
+$Class: GTF Pegasus
 $Team: Friendly
-$Location: -2993.101807, 0.000239, -10620.934570
+$Location: -4679.519043, -0.000267, -9468.061523
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -320,21 +249,90 @@ $Orientation:
 $AI Behavior: None
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
-+Initial Velocity: 33
 +Initial Hull: 100
 +Subsystem: Pilot
-+Primary Banks: ( "Subach HL-D" "" )
 $Arrival Location: Hyperspace
 $Arrival Cue: ( false ) 
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
+
+$Name: Imperial Frigate 8		;! Object #8
+$Class: Imperial Frigate
+$Team: Friendly
+$Location: -270.597076, 0.001795, 17675.564453
+$Orientation:
+	-0.577488, 0.057942, 0.814341,
+	0.099833, 0.995005, 0.000000,
+	-0.810274, 0.081298, -0.580387
+$AI Behavior: None
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Initial Hull: 100
++Subsystem: Pilot
++Subsystem: turret01
++Subsystem: turret02
++Subsystem: turret03
++Subsystem: turret04
++Subsystem: turret05
++Subsystem: turret06
++Subsystem: turret07
++Subsystem: turret08
++Subsystem: turret09
++Subsystem: turret10
++Subsystem: turret11
++Subsystem: turret12
++Subsystem: turret13
++Subsystem: turret14
++Subsystem: turret15
++Subsystem: turret16
++Subsystem: turret17
++Subsystem: turret18
++Subsystem: turret19
++Subsystem: turret20
++Subsystem: turret21
++Subsystem: turret22
++Subsystem: turret23
++Subsystem: turret24
++Subsystem: turret25
++Subsystem: turret26
++Subsystem: turret27
++Subsystem: turret28
++Subsystem: turret29
++Subsystem: turret30
++Subsystem: turret31
++Subsystem: turret32
++Subsystem: turret33
++Subsystem: turret34
++Subsystem: turret35
++Subsystem: turret36
++Subsystem: turret37
++Subsystem: turret38
++Subsystem: turret39
++Subsystem: turret40
++Subsystem: turret41
++Subsystem: turret42
++Subsystem: turret43
++Subsystem: turret44
++Subsystem: turret45
++Subsystem: turret46
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" "invulnerable" )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 1		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 100
 
 #Wings		;! 2 total
 
@@ -392,7 +390,7 @@ $Ships: (		;! 4 total
 #Background bitmaps		;! 3 total
 
 $Num stars: 2000
-$Ambient light level: 7905736
+$Ambient light level: 16777215
 
 $Bitmap List:
 $Sun: SunWhite

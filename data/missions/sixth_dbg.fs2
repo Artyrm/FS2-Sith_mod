@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 09/02/18 at 17:29:01
+$Modified: 09/06/18 at 02:00:47
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -13,26 +13,26 @@ $Mission Desc:
  XSTR("Defend Impassioned at all costs!", -1)
 $end_multi_text
 +Game Type Flags: 10
-+Flags: 0
++Flags: 64
 +Fog Near Mult: 1.000000
 
 +Fog Far Mult: 1.000000
 
 
-+Num Players: 6
++Num Players: 12
 
 +Num Respawns: 0
 
 +Max Respawn Time: -1
 +Disallow Support: 0
-+Hull Repair Ceiling: 0.000000
++Hull Repair Ceiling: 80.000000
 +Subsystem Repair Ceiling: 100.000000
 
-+Viewer pos: 7118.709961, 2059.852539, 6503.403320
++Viewer pos: -2021.453979, 628.512695, 3454.141846
 +Viewer orient:
-	-0.200777, -0.000002, 0.979637,
-	-0.173003, 0.984283, -0.035455,
-	-0.964240, -0.176599, -0.197622
+	0.014260, -0.000003, -0.999898,
+	0.279567, 0.960118, 0.003984,
+	0.960020, -0.279595, 0.013692
 
 
 $Skybox Model: frozenhurricanebox.pof
@@ -47,8 +47,10 @@ $AI Profile: FS2 RETAIL
 
 $Variables:
 (
-		0		"time_counter"		"0"		"number"
-		1		"try"		"0"		"number"
+		0		"Gold-Two-1-missiles"		"0"		"number"
+		1		"ISD_turrets_damage"		"0"		"number"
+		2		"time_counter"		"0"		"number"
+		3		"try"		"0"		"number"
 )
 
 #Command Briefing
@@ -94,13 +96,13 @@ $end_briefing
 
 $Num stages: 0
 
-#Players		;! 6 total
+#Players		;! 12 total
 
 $Starting Shipname: Alpha 1
 $Ship Choices: (
 	"GTF Pegasus"	5
-	"GTF Pegasus."	10
-	"GTNB Pharos."	10
+	"GTF Pegasus."	5
+	"GTNB Pharos."	5
 )
 
 +Weaponry Pool: (
@@ -143,16 +145,16 @@ $Ship Choices: (
 	"EMP Adv."	500
 )
 
-#Objects		;! 52 total
+#Objects		;! 64 total
 
 $Name: Alpha 1		;! Object #0
 $Class: GTF Pegasus
 $Team: Friendly
-$Location: -178.558380, 499.999939, 3695.950439
+$Location: 5328.299805, 1990.599976, 2928.500000
 $Orientation:
-	-0.249962, 0.000000, 0.968256,
-	-0.245538, 0.967312, -0.063387,
-	-0.936606, -0.253588, -0.241791
+	-0.534144, 0.000000, 0.845393,
+	0.057319, 0.997699, 0.036216,
+	-0.843448, 0.067802, -0.532915
 $AI Behavior: None
 +AI Class: Coward
 $Cargo 1:  XSTR("Nothing", -1)
@@ -164,7 +166,7 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
 +Score: 8
@@ -188,7 +190,7 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
 +Score: 8
@@ -211,8 +213,8 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
 +Score: 8
@@ -235,8 +237,8 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
 +Score: 8
@@ -259,8 +261,8 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
 +Score: 8
@@ -283,8 +285,8 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
 +Score: 8
@@ -307,8 +309,8 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
 +Score: 8
@@ -331,8 +333,8 @@ $Arrival Cue: ( false )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" )
-+Flags2: ( )
++Flags: ( "cargo-known" "player-start" )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
 +Score: 8
@@ -371,7 +373,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" )
++Flags: ( "no-shields" "no-dynamic" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -387,6 +389,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -413,6 +416,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -439,6 +443,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -459,12 +464,13 @@ $Determination: 10
 $Name: Red One 1		;! Object #12
 $Class: SF Dragon
 $Team: Hostile
-$Location: -12221.170898, -0.001678, 4395.778320
+$Location: -10443.000000, -1000.000000, 1103.400024
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -491,6 +497,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -511,12 +518,13 @@ $Determination: 10
 $Name: Red One 2		;! Object #14
 $Class: SF Dragon
 $Team: Hostile
-$Location: -12294.864258, 0.010098, 4841.541992
+$Location: -10516.686523, -999.988281, 1549.150391
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -537,12 +545,13 @@ $Determination: 10
 $Name: Red One 3		;! Object #15
 $Class: SF Dragon
 $Team: Hostile
-$Location: -12041.766602, 0.002566, 4898.239258
+$Location: -10263.593750, -999.996094, 1605.900391
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -560,15 +569,16 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Red Four 1		;! Object #16
+$Name: Blue One 1		;! Object #16
 $Class: SF Dragon
 $Team: Hostile
-$Location: -11430.223633, 0.001415, 2750.546631
+$Location: -11354.382813, 0.001438, 2724.466309
 $Orientation:
 	-0.021185, 0.000000, -0.999776,
 	-0.017266, 0.999851, 0.000366,
 	0.999626, 0.017270, -0.021182
 $AI Behavior: None
++AI Class: BP2-Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -586,15 +596,16 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Red Four 2		;! Object #17
+$Name: Blue One 2		;! Object #17
 $Class: SF Dragon
 $Team: Hostile
-$Location: -11328.421875, 0.001686, 2754.123291
+$Location: -11252.581055, 0.001709, 2728.042969
 $Orientation:
 	-0.021685, 0.000000, -0.999765,
 	-0.017419, 0.999848, 0.000378,
 	0.999613, 0.017423, -0.021682
 $AI Behavior: None
++AI Class: BP2-Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -621,6 +632,7 @@ $Orientation:
 	-0.016935, 0.999856, -0.000760,
 	0.998851, 0.016952, 0.044817
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -638,15 +650,16 @@ $Determination: 10
 +Use Table Score:
 +Score: 16
 
-$Name: Red Four 3		;! Object #19
+$Name: Blue One 3		;! Object #19
 $Class: SF Dragon
 $Team: Hostile
-$Location: -11342.456055, -0.000814, 2679.840576
+$Location: -11266.615234, -0.000791, 2653.760254
 $Orientation:
 	-0.015196, 0.000000, -0.999884,
 	-0.017402, 0.999848, 0.000264,
 	0.999733, 0.017404, -0.015194
 $AI Behavior: None
++AI Class: BP2-Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -673,6 +686,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -699,6 +713,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -725,6 +740,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -745,12 +761,13 @@ $Determination: 10
 $Name: Red One 4		;! Object #23
 $Class: SF Dragon
 $Team: Hostile
-$Location: -12439.791992, 0.009238, 4451.429688
+$Location: -10661.624023, -999.989258, 1159.087646
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
++AI Class: BP2-Captain
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -833,16 +850,16 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "cargo-known" "no-shields" )
++Flags: ( "cargo-known" "no-shields" "escort" )
 +Flags2: ( )
 +Respawn priority: 0
++Escort priority: 0
 $Special Explosion:
 +Special Exp Damage: 200
 +Special Exp Blast: 3500
 +Special Exp Inner Radius: 125
 +Special Exp Outer Radius: 650
 +Special Exp Shockwave Speed: 500
-+Orders Accepted: 1		;! note that this is a bitfield!!!
 +Group: 0
 +Use Table Score:
 +Score: 100
@@ -881,7 +898,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "no-arrival-warp" )
++Flags: ( "no-shields" "no-arrival-warp" "no-dynamic" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -922,7 +939,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "no-arrival-warp" )
++Flags: ( "no-shields" "no-arrival-warp" "no-dynamic" )
 +Flags2: ( )
 +Respawn priority: 0
 +Orders Accepted: 0		;! note that this is a bitfield!!!
@@ -955,15 +972,16 @@ $Determination: 10
 +Use Table Score:
 +Score: 8
 
-$Name: Red Four 4		;! Object #28
+$Name: Blue One 4		;! Object #28
 $Class: SF Dragon
 $Team: Hostile
-$Location: -11420.901367, -0.000826, 2680.745361
+$Location: -11345.060547, -0.000803, 2654.665039
 $Orientation:
 	-0.015171, 0.000000, -0.999885,
 	-0.017284, 0.999851, 0.000262,
 	0.999736, 0.017286, -0.015169
 $AI Behavior: None
++AI Class: BP2-Major
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Subsystem: Pilot
@@ -984,13 +1002,14 @@ $Determination: 10
 $Name: Gold One 1		;! Object #29
 $Class: GTB Zeus
 $Team: Hostile
-$Location: -11774.097656, 0.000179, -303.283569
+$Location: -10389.824219, -1000.001465, 2198.437256
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	0.279417, 0.000000, -0.960170,
+	0.399264, 0.909444, 0.116189,
+	0.873221, -0.415826, 0.254115
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret17" 50 ) ( ai-destroy-subsystem "Impassioned" "turret18" 50 ) ( ai-destroy-subsystem "Impassioned" "turret16" 50 ) ( ai-destroy-subsystem "Impassioned" "turret15" 50 ) ( ai-destroy-subsystem "Impassioned" "turret23" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1011,13 +1030,14 @@ $Determination: 10
 $Name: Gold One 2		;! Object #30
 $Class: GTB Zeus
 $Team: Hostile
-$Location: -11630.728516, 0.000474, -267.783447
+$Location: -10246.449219, -1000.000977, 2233.937256
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	0.280377, 0.000000, -0.959890,
+	0.407248, 0.905538, 0.118954,
+	0.869217, -0.424265, 0.253892
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret17" 50 ) ( ai-destroy-subsystem "Impassioned" "turret18" 50 ) ( ai-destroy-subsystem "Impassioned" "turret16" 50 ) ( ai-destroy-subsystem "Impassioned" "turret15" 50 ) ( ai-destroy-subsystem "Impassioned" "turret23" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1038,13 +1058,14 @@ $Determination: 10
 $Name: Gold One 3		;! Object #31
 $Class: GTB Zeus
 $Team: Hostile
-$Location: -11755.305664, 0.000193, -574.981079
+$Location: -10371.074219, -1000.001465, 1926.749756
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	0.320453, 0.000000, -0.947264,
+	0.390538, 0.911057, 0.132116,
+	0.863012, -0.412280, 0.291951
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret17" 50 ) ( ai-destroy-subsystem "Impassioned" "turret18" 50 ) ( ai-destroy-subsystem "Impassioned" "turret16" 50 ) ( ai-destroy-subsystem "Impassioned" "turret15" 50 ) ( ai-destroy-subsystem "Impassioned" "turret23" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1065,13 +1086,14 @@ $Determination: 10
 $Name: Gold One 4		;! Object #32
 $Class: GTB Zeus
 $Team: Hostile
-$Location: -11612.372070, 0.000666, -556.052368
+$Location: -10228.074219, -1000.000977, 1945.687012
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	0.324819, 0.000000, -0.945776,
+	0.397452, 0.907414, 0.136502,
+	0.858210, -0.420239, 0.294745
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret17" 50 ) ( ai-destroy-subsystem "Impassioned" "turret18" 50 ) ( ai-destroy-subsystem "Impassioned" "turret16" 50 ) ( ai-destroy-subsystem "Impassioned" "turret15" 50 ) ( ai-destroy-subsystem "Impassioned" "turret23" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1098,7 +1120,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret39" 50 ) ( ai-destroy-subsystem "Impassioned" "turret01" 50 ) ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) ( ai-destroy-subsystem "Impassioned" "turret03" 50 ) ( ai-destroy-subsystem "Impassioned" "turret04" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1125,7 +1148,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret01" 50 ) ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) ( ai-destroy-subsystem "Impassioned" "turret03" 50 ) ( ai-destroy-subsystem "Impassioned" "turret04" 50 ) ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1152,7 +1176,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret02" 50 ) ( ai-destroy-subsystem "Impassioned" "turret03" 50 ) ( ai-destroy-subsystem "Impassioned" "turret04" 50 ) ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) ( ai-destroy-subsystem "Impassioned" "turret06" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1179,7 +1204,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret03" 50 ) ( ai-destroy-subsystem "Impassioned" "turret04" 50 ) ( ai-destroy-subsystem "Impassioned" "turret07" 50 ) ( ai-destroy-subsystem "Impassioned" "turret08" 50 ) ( ai-destroy-subsystem "Impassioned" "turret09" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1206,8 +1232,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret25" 50 ) ( ai-destroy-subsystem "Impassioned" "turret26" 50 ) ( ai-destroy-subsystem "Impassioned" "turret27" 50 ) ( ai-destroy-subsystem "Impassioned" "turret28" 50 ) ( ai-destroy-subsystem "Impassioned" "turret12" 50 ) )
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) ( ai-destroy-subsystem "Impassioned" "turret06" 50 ) ( ai-destroy-subsystem "Impassioned" "turret07" 50 ) ( ai-destroy-subsystem "Impassioned" "turret08" 50 ) ( ai-destroy-subsystem "Impassioned" "turret46" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1234,8 +1260,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret25" 50 ) ( ai-destroy-subsystem "Impassioned" "turret26" 50 ) ( ai-destroy-subsystem "Impassioned" "turret27" 50 ) ( ai-destroy-subsystem "Impassioned" "turret28" 50 ) ( ai-destroy-subsystem "Impassioned" "turret12" 50 ) )
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) ( ai-destroy-subsystem "Impassioned" "turret06" 50 ) ( ai-destroy-subsystem "Impassioned" "turret07" 50 ) ( ai-destroy-subsystem "Impassioned" "turret08" 50 ) ( ai-destroy-subsystem "Impassioned" "turret46" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1262,8 +1288,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret25" 50 ) ( ai-destroy-subsystem "Impassioned" "turret26" 50 ) ( ai-destroy-subsystem "Impassioned" "turret27" 50 ) ( ai-destroy-subsystem "Impassioned" "turret28" 50 ) ( ai-destroy-subsystem "Impassioned" "turret12" 50 ) )
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) ( ai-destroy-subsystem "Impassioned" "turret06" 50 ) ( ai-destroy-subsystem "Impassioned" "turret07" 50 ) ( ai-destroy-subsystem "Impassioned" "turret08" 50 ) ( ai-destroy-subsystem "Impassioned" "turret46" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1290,8 +1316,8 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: General
-$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret25" 50 ) ( ai-destroy-subsystem "Impassioned" "turret26" 50 ) ( ai-destroy-subsystem "Impassioned" "turret27" 50 ) ( ai-destroy-subsystem "Impassioned" "turret28" 50 ) ( ai-destroy-subsystem "Impassioned" "turret12" 50 ) )
++AI Class: BP2-General
+$AI Goals: ( goals ( ai-destroy-subsystem "Impassioned" "turret05" 50 ) ( ai-destroy-subsystem "Impassioned" "turret06" 50 ) ( ai-destroy-subsystem "Impassioned" "turret07" 50 ) ( ai-destroy-subsystem "Impassioned" "turret08" 50 ) ( ai-destroy-subsystem "Impassioned" "turret46" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Velocity: 33
 +Initial Hull: 100
@@ -1312,13 +1338,12 @@ $Determination: 10
 $Name: Gamma 1		;! Object #41
 $Class: GTF Pegasus
 $Team: Friendly
-$Location: -1022.189392, -0.002347, 3613.621582
+$Location: -204.000000, 500.000000, 3295.800049
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Coward
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -1329,7 +1354,7 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
 +Use Table Score:
@@ -1338,13 +1363,12 @@ $Determination: 10
 $Name: Gamma 2		;! Object #42
 $Class: GTF Pegasus
 $Team: Friendly
-$Location: -1092.470215, -0.002346, 3616.656006
+$Location: -274.280884, 500.000000, 3298.834473
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Coward
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -1355,7 +1379,7 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
 +Use Table Score:
@@ -1364,13 +1388,12 @@ $Determination: 10
 $Name: Gamma 3		;! Object #43
 $Class: GTF Pegasus
 $Team: Friendly
-$Location: -963.087585, -0.002345, 3611.824707
+$Location: -144.898193, 500.000000, 3294.003174
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Coward
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -1381,7 +1404,7 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" )
-+Flags2: ( )
++Flags2: ( "no-death-scream" )
 +Respawn priority: 0
 +Group: 0
 +Use Table Score:
@@ -1390,13 +1413,12 @@ $Determination: 10
 $Name: Gamma 4		;! Object #44
 $Class: GTF Pegasus
 $Team: Friendly
-$Location: -1022.869751, -0.002351, 3578.522705
+$Location: -351.100006, 500.000000, 3328.699951
 $Orientation:
-	1.000000, 0.000000, 0.000000,
-	0.000000, 1.000000, 0.000000,
-	0.000000, 0.000000, 1.000000
+	-0.977993, 0.000000, -0.208638,
+	0.058469, 0.959930, -0.274073,
+	0.200278, -0.280240, -0.938805
 $AI Behavior: None
-+AI Class: Coward
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
@@ -1407,22 +1429,22 @@ $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
 +Flags: ( "cargo-known" "player-start" "invulnerable" "hidden-from-sensors" "stealth" "friendly-stealth-invisible" )
-+Flags2: ( "hide-ship-name" "cloaked" "no-collide" )
++Flags2: ( "no-death-scream" "hide-ship-name" "cloaked" "no-collide" )
 +Respawn priority: 0
 +Group: 0
 +Use Table Score:
 +Score: 10
 
 $Name: Delta 1		;! Object #45
-$Class: GTF Pegasus
+$Class: GTF Loki
 $Team: Friendly
-$Location: -407.701294, -0.002389, 4003.354492
+$Location: -431.611053, -0.002174, 4209.661621
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-$AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1435,19 +1457,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Delta 2		;! Object #46
-$Class: GTF Pegasus
+$Class: GTF Loki
 $Team: Friendly
-$Location: -331.475525, -0.002390, 3998.310547
+$Location: -355.385284, -0.002175, 4204.617676
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-$AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1460,19 +1481,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Delta 3		;! Object #47
-$Class: GTF Pegasus
+$Class: GTF Loki
 $Team: Friendly
-$Location: -248.208710, -0.002385, 4017.180664
+$Location: -272.118469, -0.002170, 4223.487793
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-$AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1485,19 +1505,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Delta 4		;! Object #48
-$Class: GTF Pegasus
+$Class: GTF Loki
 $Team: Friendly
-$Location: -336.984497, -0.002386, 3922.054688
+$Location: -360.894257, -0.002171, 4128.361816
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-$AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1510,19 +1529,18 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 10
 
 $Name: Freighter One		;! Object #49
 $Class: GTDR Amazon Advanced
 $Team: Friendly
-$Location: 2290.760254, 2000.000000, 3334.227539
+$Location: 5211.364258, 2000.000000, 2854.616699
 $Orientation:
 	1.000000, -0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
 	-0.000000, -0.000000, 1.000000
 $AI Behavior: None
-$Cargo 1:  XSTR("Nothing", -1)
+$Cargo 1:  XSTR("Crew", -1)
 +Initial Hull: 100
 +Initial Shields: 100
 +Subsystem: Pilot
@@ -1531,7 +1549,7 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Determination: 10
-+Flags: ( "no-shields" "no-dynamic" )
++Flags: ( "no-shields" "scannable" "no-dynamic" )
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
@@ -1540,7 +1558,7 @@ $Determination: 10
 $Name: Cargo One		;! Object #50
 $Class: TAC 1
 $Team: Friendly
-$Location: 2290.961670, 2013.569824, 3330.212891
+$Location: 5211.565430, 2013.569824, 2850.602051
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	-0.000000, 0.999995, 0.003098,
@@ -1568,7 +1586,7 @@ $Dockee Point: cargo dockpoint
 $Name: GTF Ulysses 51		;! Object #51
 $Class: GTNB Pharos.
 $Team: Friendly
-$Location: 2278.135254, 1999.998779, 3262.665039
+$Location: 3020.743408, 1999.998779, -1568.667358
 $Orientation:
 	1.000000, 0.000000, 0.000000,
 	0.000000, 1.000000, 0.000000,
@@ -1588,7 +1606,311 @@ $Determination: 10
 +Group: 0
 +Score: 8
 
-#Wings		;! 11 total
+$Name: Blue Two 1		;! Object #52
+$Class: SF Dragon
+$Team: Hostile
+$Location: -11044.459961, 0.001430, 2583.207764
+$Orientation:
+	-0.021185, 0.000000, -0.999776,
+	-0.017266, 0.999851, 0.000366,
+	0.999626, 0.017270, -0.021182
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Blue Two 2		;! Object #53
+$Class: SF Dragon
+$Team: Hostile
+$Location: -10942.658203, 0.001701, 2586.784424
+$Orientation:
+	-0.021685, 0.000000, -0.999765,
+	-0.017419, 0.999848, 0.000378,
+	0.999613, 0.017423, -0.021682
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Blue Two 3		;! Object #54
+$Class: SF Dragon
+$Team: Hostile
+$Location: -10956.692383, -0.000799, 2512.501709
+$Orientation:
+	-0.015196, 0.000000, -0.999884,
+	-0.017402, 0.999848, 0.000264,
+	0.999733, 0.017404, -0.015194
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Blue Two 4		;! Object #55
+$Class: SF Dragon
+$Team: Hostile
+$Location: -11035.137695, -0.000811, 2513.406494
+$Orientation:
+	-0.015171, 0.000000, -0.999885,
+	-0.017284, 0.999851, 0.000262,
+	0.999736, 0.017286, -0.015169
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Blue Three 1		;! Object #56
+$Class: SF Dragon
+$Team: Hostile
+$Location: -10976.823242, 0.001435, 2913.267090
+$Orientation:
+	-0.021185, 0.000000, -0.999776,
+	-0.017266, 0.999851, 0.000366,
+	0.999626, 0.017270, -0.021182
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Blue Three 2		;! Object #57
+$Class: SF Dragon
+$Team: Hostile
+$Location: -10875.021484, 0.001706, 2916.843750
+$Orientation:
+	-0.021685, 0.000000, -0.999765,
+	-0.017419, 0.999848, 0.000378,
+	0.999613, 0.017423, -0.021682
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Blue Three 3		;! Object #58
+$Class: SF Dragon
+$Team: Hostile
+$Location: -10889.055664, -0.000794, 2842.561035
+$Orientation:
+	-0.015196, 0.000000, -0.999884,
+	-0.017402, 0.999848, 0.000264,
+	0.999733, 0.017404, -0.015194
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Blue Three 4		;! Object #59
+$Class: SF Dragon
+$Team: Hostile
+$Location: -10967.500977, -0.000806, 2843.465820
+$Orientation:
+	-0.015171, 0.000000, -0.999885,
+	-0.017284, 0.999851, 0.000262,
+	0.999736, 0.017286, -0.015169
+$AI Behavior: None
++AI Class: BP2-Major
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Velocity: 33
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( )
++Flags2: ( )
++Respawn priority: 0
++Orders Accepted: 0		;! note that this is a bitfield!!!
++Group: 0
++Use Table Score:
++Score: 16
+
+$Name: Epsilon 1		;! Object #60
+$Class: GTF Loki
+$Team: Friendly
+$Location: -483.919769, -0.002343, 3923.600830
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Lieutenant
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+$Name: Epsilon 2		;! Object #61
+$Class: GTF Loki
+$Team: Friendly
+$Location: -407.694000, -0.002344, 3918.556885
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Lieutenant
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+$Name: Epsilon 3		;! Object #62
+$Class: GTF Loki
+$Team: Friendly
+$Location: -324.427185, -0.002339, 3937.427002
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Lieutenant
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+$Name: Epsilon 4		;! Object #63
+$Class: GTF Loki
+$Team: Friendly
+$Location: -413.202972, -0.002340, 3842.301025
+$Orientation:
+	1.000000, 0.000000, 0.000000,
+	0.000000, 1.000000, 0.000000,
+	0.000000, 0.000000, 1.000000
+$AI Behavior: None
++AI Class: BP2-Lieutenant
+$Cargo 1:  XSTR("Nothing", -1)
++Initial Hull: 100
++Subsystem: Pilot
+$Arrival Location: Hyperspace
+$Arrival Cue: ( false ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Determination: 10
++Flags: ( "cargo-known" )
++Flags2: ( )
++Respawn priority: 0
++Group: 0
++Score: 8
+
+#Wings		;! 14 total
 
 $Name: Alpha
 $Waves: 1
@@ -1693,10 +2015,10 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard-wing "Gold Three" 50 ) )
 +Flags: ( )
 
-$Name: Red Four
+$Name: Blue One
 $Waves: 1
 $Wave Threshold: 0
-$Special Ship: 0		;! Red Four 1
+$Special Ship: 0		;! Blue One 1
 
 $Arrival Location: Hyperspace
 +Arrival delay: 30
@@ -1704,10 +2026,10 @@ $Arrival Cue: ( true )
 $Departure Location: Hyperspace
 $Departure Cue: ( false ) 
 $Ships: (		;! 4 total
-	"Red Four 1"
-	"Red Four 2"
-	"Red Four 3"
-	"Red Four 4"
+	"Blue One 1"
+	"Blue One 2"
+	"Blue One 3"
+	"Blue One 4"
 )
 $AI Goals: ( goals ( ai-chase-any 50 ) )
 +Flags: ( )
@@ -1717,9 +2039,7 @@ $Waves: 1
 $Wave Threshold: 0
 $Special Ship: 0		;! Gold One 1
 
-$Arrival Location: In front of ship
-+Arrival Distance: 428
-$Arrival Anchor: Hope
+$Arrival Location: Hyperspace
 +Arrival delay: 50
 $Arrival Cue: ( true ) 
 $Departure Location: Hyperspace
@@ -1730,8 +2050,7 @@ $Ships: (		;! 4 total
 	"Gold One 3"
 	"Gold One 4"
 )
-$AI Goals: ( goals ( ai-disable-ship "Impassioned" 50 ) )
-+Flags: ( )
++Flags: ( "no-dynamic" )
 
 $Name: Gold Two
 $Waves: 1
@@ -1751,7 +2070,6 @@ $Ships: (		;! 4 total
 	"Gold Two 3"
 	"Gold Two 4"
 )
-$AI Goals: ( goals ( ai-disarm-ship "Impassioned" 56 ) )
 +Flags: ( "no-dynamic" )
 
 $Name: Gold Three
@@ -1772,27 +2090,7 @@ $Ships: (		;! 4 total
 	"Gold Three 3"
 	"Gold Three 4"
 )
-$AI Goals: ( goals ( ai-disarm-ship "Impassioned" 50 ) )
-+Flags: ( )
-
-$Name: Gamma
-$Waves: 1
-$Wave Threshold: 0
-$Special Ship: 0		;! Gamma 1
-
-$Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Ships: (		;! 4 total
-	"Gamma 1"
-	"Gamma 2"
-	"Gamma 3"
-	"Gamma 4"
-)
-$AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
-+Hotkey: 2
-+Flags: ( )
++Flags: ( "no-dynamic" )
 
 $Name: Delta
 $Waves: 1
@@ -1812,7 +2110,80 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 +Flags: ( )
 
-#Events		;! 13 total
+$Name: Blue Two
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Blue Two 1
+
+$Arrival Location: Hyperspace
++Arrival delay: 30
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Blue Two 1"
+	"Blue Two 2"
+	"Blue Two 3"
+	"Blue Two 4"
+)
+$AI Goals: ( goals ( ai-chase-any 50 ) )
++Flags: ( )
+
+$Name: Blue Three
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Blue Three 1
+
+$Arrival Location: Hyperspace
++Arrival delay: 30
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Blue Three 1"
+	"Blue Three 2"
+	"Blue Three 3"
+	"Blue Three 4"
+)
++Flags: ( )
+
+$Name: Epsilon
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Epsilon 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Epsilon 1"
+	"Epsilon 2"
+	"Epsilon 3"
+	"Epsilon 4"
+)
+$AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
++Flags: ( )
+
+$Name: Gamma
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Gamma 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Gamma 1"
+	"Gamma 2"
+	"Gamma 3"
+	"Gamma 4"
+)
++Hotkey: 2
++Flags: ( )
+
+#Events		;! 23 total
 
 $Formula: ( when 
    ( false ) 
@@ -1842,7 +2213,7 @@ $Formula: ( when
          ( get-object-y "Impassioned" "<none>" ) 
          ( get-object-z 
             "Impassioned" 
-            "turret01" 
+            "turret06" 
             0 
             0 
             5000 
@@ -1853,7 +2224,47 @@ $Formula: ( when
 +Name: Initialize
 +Repeat Count: 1
 +Interval: 1
-+Objective:  XSTR("You kidding me?", -1)
++Objective:  XSTR("You kidding me!", -1)
++Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
+
+$Formula: ( when 
+   ( false ) 
+   ( when-argument 
+      ( any-of 
+         "Gamma 1" 
+         "Gamma 2" 
+         "Gamma 3" 
+         "Gamma 4" 
+         "Alpha 1" 
+         "Alpha 2" 
+         "Alpha 3" 
+         "Alpha 4" 
+         "Beta 1" 
+         "Beta 2" 
+         "Beta 3" 
+         "Beta 4" 
+      )
+      ( is-ship-class 
+         "GTNB Pharos." 
+         "<argument>" 
+      )
+      ( ship-invisible "<argument>" ) 
+      ( send-message 
+         "#Command" 
+         "High" 
+         "Got sattelite" 
+      )
+      ( friendly-stealth-invisible 
+         "<argument>" 
+      )
+      ( ship-stealthy "<argument>" ) 
+      ( ship-vaporize "<argument>" ) 
+      ( self-destruct "<argument>" ) 
+   )
+)
++Name: *Silently destroy sattelites
++Repeat Count: 1
++Interval: 1
 +Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
 
 $Formula: ( when ( true ) ( hud-disable 1 ) ) 
@@ -1879,7 +2290,7 @@ $Formula: ( when
 +Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
 
 $Formula: ( when 
-   ( has-arrived-delay 10 "Gold One 1" ) 
+   ( has-arrived-delay 0 "Gold One 1" ) 
    ( good-secondary-time 
       "Hostile" 
       200 
@@ -1913,7 +2324,6 @@ $Formula: ( when
 +Name: *Hope chase SD
 +Repeat Count: 999999
 +Interval: 20
-+Event Log Flags: ( "true" "false" "always false" "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
 
 $Formula: ( when 
    ( <= 
@@ -1948,7 +2358,6 @@ $Formula: ( when
 +Name: Hope keep distance
 +Repeat Count: 999999
 +Interval: 20
-+Event Log Flags: ( "true" "false" "always false" "first repeat" "last repeat" "first trigger" "last trigger" "state change" )
 
 $Formula: ( when 
    ( <= 
@@ -2020,6 +2429,138 @@ $Formula: ( when
 +Name: Brave keep distance
 +Repeat Count: 999999
 +Interval: 10
+
+$Formula: ( when 
+   ( true ) 
+   ( set-object-position 
+      "Target waypoint for t25:1" 
+      ( get-object-x 
+         "Impassioned" 
+         "<none>" 
+         1000 
+      )
+      ( get-object-y 
+         "Impassioned" 
+         "<none>" 
+         0 
+         3000 
+      )
+      ( get-object-z 
+         "Impassioned" 
+         "<none>" 
+         0 
+         0 
+         200 
+      )
+   )
+   ( when 
+      ( true ) 
+      ( add-nav-waypoint 
+         "T25" 
+         "Target waypoint for t25" 
+         1 
+      )
+   )
+)
++Name: WP to follow SD t25
++Repeat Count: 999999
++Interval: 1
+
+$Formula: ( when 
+   ( has-arrived-delay 5 "Gold One" ) 
+   ( ship-guardian-threshold 
+      60 
+      "Impassioned" 
+   )
+   ( sabotage-subsystem 
+      "Impassioned" 
+      "turret32" 
+      101 
+   )
+   ( modify-variable 
+      @Gold-Two-1-missiles[0] 
+      ( get-secondary-ammo "Gold Two 1" 0 ) 
+   )
+)
++Name: First wave
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < 
+      ( get-secondary-ammo "Gold Two 1" 0 ) 
+      @Gold-Two-1-missiles[0] 
+   )
+   ( modify-variable 
+      @Gold-Two-1-missiles[0] 
+      ( get-secondary-ammo "Gold Two 1" 0 ) 
+   )
+   ( send-message 
+      "#Command" 
+      "High" 
+      "Gold two missiles" 
+   )
+)
++Name: Print missiles
++Repeat Count: 999999
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( true ) 
+   ( when 
+      ( = 
+         ( get-secondary-ammo "Gold Two 1" 0 ) 
+         0 
+      )
+      ( ship-no-guardian "Impassioned" ) 
+      ( add-goal 
+         "Gold One" 
+         ( ai-warp-out 89 ) 
+      )
+      ( add-goal 
+         "Gold Two" 
+         ( ai-warp-out 89 ) 
+      )
+      ( add-goal 
+         "Gold Three" 
+         ( ai-warp-out 89 ) 
+      )
+      ( send-message 
+         "#Command" 
+         "High" 
+         "Rockets depleted" 
+      )
+   )
+)
++Name: Bombers away
++Repeat Count: 999999
++Interval: 1
++Chained: 0
+
+$Formula: ( when 
+   ( false ) 
+   ( when 
+      ( true ) 
+      ( send-message 
+         "Gold One 1" 
+         "High" 
+         "Bombers attack" 
+      )
+   )
+   ( clear-goals "Gold One" ) 
+   ( add-goal 
+      "Gold One" 
+      ( ai-destroy-subsystem 
+         "Impassioned" 
+         "turret16" 
+         89 
+      )
+   )
+)
++Name: Bombers attack t25
++Repeat Count: 1
++Interval: 1
 
 $Formula: ( when 
    ( true ) 
@@ -2107,7 +2648,7 @@ $Formula: ( when
       ( true ) 
       0 
       0 
-      100 
+      64 
       ( true ) 
    )
    ( change-iff 
@@ -2131,19 +2672,6 @@ $Formula: ( when
          "To the bot of SD:1" 
       )
       50 
-   )
-   ( explosion-effect 
-      ( get-object-x "Freighter One" ) 
-      ( get-object-y "Freighter One" ) 
-      ( get-object-z "Freighter One" ) 
-      30000 
-      1000 
-      300 
-      100 
-      300 
-      500 
-      2 
-      7 
    )
    ( when 
       ( false ) 
@@ -2175,12 +2703,98 @@ $Formula: ( when
       "Impassioned" 
       0 
    )
-   ( do-nothing ) 
+   ( explosion-effect 
+      ( get-object-x "Freighter One" ) 
+      ( get-object-y "Freighter One" ) 
+      ( get-object-z "Freighter One" ) 
+      30000 
+      1000 
+      300 
+      100 
+      300 
+      500 
+      2 
+      7 
+   )
 )
 +Name: Kamikaze explode
 +Repeat Count: 1
 +Interval: 1
 +Chained: 0
+
+$Formula: ( when 
+   ( false ) 
+   ( explosion-effect 
+      ( get-object-x "Cargo One" ) 
+      ( get-object-y "Cargo One" ) 
+      ( get-object-z "Cargo One" ) 
+      30000 
+      1000 
+      300 
+      100 
+      300 
+      500 
+      2 
+      7 
+   )
+   ( send-message 
+      "#Command" 
+      "High" 
+      "Coll. check" 
+   )
+   ( when 
+      ( is-destroyed-delay 
+         0 
+         "Freighter One" 
+      )
+      ( do-nothing ) 
+   )
+)
++Name: Kamikaze on destroy
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( is-cargo-known-delay 3 "Cargo One" ) 
+   ( change-iff "Hostile" "Cargo One" ) 
+)
++Name: Bomb scan
++Repeat Count: 1
++Interval: 1
+
+$Formula: ( when 
+   ( < 
+      ( hits-left-subsystem-generic 
+         "Impassioned" 
+         "Turrets" 
+      )
+      ( - 100 @ISD_turrets_damage[0] ) 
+   )
+   ( modify-variable 
+      @ISD_turrets_damage[0] 
+      ( - 
+         100 
+         ( hits-left-subsystem-generic 
+            "Impassioned" 
+            "Turrets" 
+         )
+      )
+   )
+   ( send-message 
+      "Impassioned" 
+      "High" 
+      "Turrets damaged" 
+   )
+)
++Name: Turrets damaged log
++Repeat Count: 999999
++Interval: 1
++Event Log Flags: ( "true" "last repeat" "first trigger" )
+
+$Formula: ( when ( true ) ( do-nothing ) ) 
++Name: Event name
++Repeat Count: 1
++Interval: 1
 
 #Goals		;! 1 total
 
@@ -2191,7 +2805,7 @@ $end_multi_text
 $Formula: ( ship-type-destroyed 100 "Cruiser" ) 
 +Score: 100
 
-#Waypoints		;! 6 lists total
+#Waypoints		;! 7 lists total
 
 $Name: To the right from SD
 $List: (		;! 1 points in list
@@ -2220,10 +2834,15 @@ $List: (		;! 1 points in list
 
 $Name: To the bot of SD
 $List: (		;! 1 points in list
-	( -5635.107910, 0.000063, 2099.184814 )
+	( -2655.495605, 1999.998901, -1923.958008 )
 )
 
-#Messages		;! 6 total
+$Name: Target waypoint for t25
+$List: (		;! 1 points in list
+	( -579.599976, 3000.000000, 1337.699951 )
+)
+
+#Messages		;! 11 total
 
 
 $Name: Warn dist Hope
@@ -2256,6 +2875,31 @@ $end_multi_text
 $Name: Coll. check
 $Team: -1
 $MessageNew:  XSTR("I'm in!", -1)
+$end_multi_text
+
+$Name: Bombers attack
+$Team: -1
+$MessageNew:  XSTR("Attack!", -1)
+$end_multi_text
+
+$Name: Turrets damaged
+$Team: -1
+$MessageNew:  XSTR("Turrets damaged for $ISD_turrets_damage", -1)
+$end_multi_text
+
+$Name: Rockets depleted
+$Team: -1
+$MessageNew:  XSTR("Rockets depleted", -1)
+$end_multi_text
+
+$Name: Gold two missiles
+$Team: -1
+$MessageNew:  XSTR("Gold two has $Gold-Two-1-missiles missiles", -1)
+$end_multi_text
+
+$Name: Got sattelite
+$Team: -1
+$MessageNew:  XSTR("Got sattelite", -1)
 $end_multi_text
 
 #Reinforcements		;! 0 total

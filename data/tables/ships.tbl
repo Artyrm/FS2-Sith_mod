@@ -706,12 +706,12 @@ $Allowed SBanks:        ( "Rockeye"  "Tempest" "Harpoon" "Trebuchet" "Hornet" "T
 $Allowed Dogfight SBanks:      ( "Tempest D" "Hornet D" )
 $Default SBanks:        ( "Harpoon" )
 $SBank Capacity:        ( 20 )
-$Shields:                       400
+$Shields:                       200
 $Shield Color:		100 100 255
 $Power Output:          3.0
 $Max Oclk Speed:        95.0
 $Max Weapon Eng:        150.0
-$Hitpoints:                     250
+$Hitpoints:                     150
 $Flags:                         ( "player_ship" "default_player_ship" "fighter" "in tech database")
 $AI Class:                      Captain
 $Afterburner:           YES
@@ -2458,6 +2458,124 @@ $Closeup_pos:           0.0, 0.0, -86
 $Closeup_zoom:          0.25
 $Score:					5
 
+$Name:                          Asteroid Hangar
+$Short name:            		Asteroid Hangar
+$Species:                       Terran
++Type:                          XSTR("Hangar", -1)
++Maneuverability:       		XSTR("Bad", -1)
++Armor:                         XSTR("Average", -1)
++Manufacturer:          		XSTR("Pitz Co.", -1)
++Description:					XSTR("Asteroid Hangar", -1)
+$end_multi_text
++Tech Description:				XSTR("The Hangar is a medium sized hangar that is specifcially modified to be built into an asteroid.", -1)
+$end_multi_text
+$POF file:                      asteroidHangar.pof
+$POF Target LOD:                0
+$Detail distance:       (0, 100, 600)
+;$ND:							42, 42, 224
+$Show damage:           NO
+$Damage Lightning Type:			None
+$Impact Spew:
++Max particles:					40
++Min particles:					20
++Max Radius:					0.6						; 0.5f
++Min Radius:					0.2						; 0.2f
++Max Lifetime:					0.8						; 0.55f
++Min Lifetime:					0.2						; 0.05f
++Max Velocity:					50						; 12.0f
++Min Velocity:					35						; 2.0f
++Normal Variance:				0.2
+$Damage Spew:											; Controls the 'smoke' released on weapon impact point, Certain default values (marked with X) gain a specific multiplier based on ship radius,  If the radius is less than 20 the multiplier is 1. If the radius is larger than 40 the multipler is 1.2 Otherwise it is between 1 and 1.2
++Max Particles:					70						; X
++Min Particles:					30						; X
++Max Radius:					2.0						; X	
++Min Radius:					1.0						; X
++Max Lifetime:					3.0						; X
++Min Lifetime:					1.0						; X
++Max Velocity:					25						; X
++Min Velocity:					10						; X
++Normal Variance:				0.02					; X
+$Debris:
++Min Lifetime:					1					; float, seconds
++Max Lifetime:					10					; float, seconds 
++Min Speed:						0.1					; float, m/s
++Max Speed:						1					; float, m/s
++Min Rotation speed:			6					; Defines the minimum rotational speed of the debris, Default is (6 to 10)/Ship-radius
++Max Rotation speed:			10					; float, rad/sec
++Min Hitpoints:					5					; float
++Max Hitpoints:					10					; float
++Damage Multiplier:				0.3					; float
++Lightning Arc Percent:			10					; float, 0-100, Controls what percent of debris pieces will have the damage lightning effect applied to them. Default is 50% 
+$Density:                       1
+$Damp:                          0.2
+$Rotdamp:                       0.2
+$Banking Constant:				0.0
+$Max Velocity:          0.0, 0.0, 0.0                  ;; in x/y/z -- z only specified forward.  use special tokens for backward movement
+$Rotation time:         20.0, 22.0, 22.0
+$Rear Velocity:         0.0
+$Forward accel:         1.0
+$Forward decel:         1.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Glide:					NO
+$Expl inner rad:        100.0
+$Expl outer rad:        3500.0
+$Expl damage:           30.0
+$Expl blast:            3500.0
+$Expl Propagates:       YES                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Propagating Expl Radius Multiplier:		1.1
+$Death FX Explosion Radius Mult:		1.2					; Defines the multiplier applied to the ship death explosions
+$Death FX Explosion Count:				5					; Defines the number of explosion effect game uses when a large ship dies, default is 6. 
+$Ship Splitting Particles:				
++Max Particles:							120
++Min Particles:							60
++Max Velocity:							40
++Min Velocity:							20
++Normal Variance:						2
+$Ship Death Particles:
++Max Particles:							600
++Min Particles:							400
++Max Radius:							2.5
++Min Radius:							1.2
++Max Lifetime:							15.0
++Min Lifetime:							4
++Max Velocity:							60.0
++Min Velocity:							30.0
++Normal Variance:						2.0
+$Shockwave Speed:       0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Explosion Animations:					( 4, 5, 6 )		
+$Shields:                       0
+$Shield Color:		100 100 255
+$Power Output:          50.0
+$Shield Regeneration Rate:	0
+$Weapon Regeneration Rate:	0.0
+$Max Oclk Speed:        0.0
+$Max Weapon Eng:        0.0
+$Hitpoints:                     200000
+$Subsystem Repair Rate:		1.0
+$Flags:                         (  "drydock" "in tech database" "intrinsic no shields"  )
+$AI Class:                      None
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       Corvette_Engine.wav                   ;; Engine sound of ship
+$Closeup_pos:           0.0, 0.0, -1040
+$Closeup_zoom:          0.5
+$Shield_icon:           Shield_Asteroidbase
+;$Ship_icon:                     minixwing
+;$Ship_anim:                     demoxwing
+;$Ship_overhead: 				loadxwing
+$Score:             8
+$Radar Image 2D:				radar-asteroid
+$3D Radar Blip Size Multiplier:	0.85
+$Subsystem:             Fighterbay, 3, 0.0
+		$Alt Subsystem Name:	Fighterbay									
+		$Flags:					( "ignore if dead" "damage as hull" "allow landing" )
+$Subsystem:				communications, 0.5, 0
+	$Alt Subsystem Name:	Comm. Tower
+	$Flags:					( "ignore if dead" )
+
+;;=========================================================================================================================================================================================== 
 
 $Name:                          @GTC Fenris
 $Short name:					TCruise
@@ -2526,6 +2644,1243 @@ $Subsystem:                     navigation,              4, 0.0
 $Subsystem:                     weapons,                         4, 0.0
 $Subsystem:                     engine,                 30, 0.0
 	$Engine Wash:				Default100
+
+$Name:                          MC80 Mon Calamari Cruiser
+$Short name:					MC
+$Species:                       Terran
++Type:                  	XSTR("Cruiser", -1)
++Maneuverability:       	XSTR("Poor", -1)
++Armor:                 	XSTR("Excellent", -1)
++Manufacturer:          	XSTR("Mon Calamari", -1)
++Description:				XSTR("Rebel Alliance Assault Cruiser", -1)
+$end_multi_text
++Tech Description:			XSTR("The MC80 Home One type Star Cruiser is one of the several MC80 Star Cruiser designs built by the Mon Calamari. Originally fielded before the Galactic Civil War as civilian vessels, they were modified by the Rebel Alliance, and serve in command ship and battleship roles in the Alliance Fleet.", -1)
+$end_multi_text
+$POF file:                      homeone.pof
+$POF Target LOD:                0
+$Detail distance:				(0, 20, 3500)
+;$ND:							42, 42, 224
+$Show damage:					YES
+$Damage Lightning Type:			None
+$Impact Spew:
++Max particles:					120
++Min particles:					40
++Max Radius:					2.0						; 0.5f
++Min Radius:					0.4						; 0.2f
++Max Lifetime:					0.8						; 0.55f
++Min Lifetime:					0.2						; 0.05f
++Max Velocity:					50						; 12.0f
++Min Velocity:					35						; 2.0f
++Normal Variance:				0.2
+$Damage Spew:											; Controls the 'smoke' released on weapon impact point, Certain default values (marked with X) gain a specific multiplier based on ship radius,  If the radius is less than 20 the multiplier is 1. If the radius is larger than 40 the multipler is 1.2 Otherwise it is between 1 and 1.2
++Max Particles:					160						; X
++Min Particles:					50						; X
++Max Radius:					12.0					; X	
++Min Radius:					2.5						; X
++Max Lifetime:					6.0						; X
++Min Lifetime:					2.0						; X
++Max Velocity:					30						; X
++Min Velocity:					15						; X
++Normal Variance:				0.02					; X
+$Debris:
++Min Lifetime:					7					; float, seconds
++Max Lifetime:					20					; float, seconds 
++Min Speed:						0.1					; float, m/s
++Max Speed:						1					; float, m/s
++Min Rotation speed:			6					; Defines the minimum rotational speed of the debris, Default is (6 to 10)/Ship-radius
++Max Rotation speed:			10					; float, rad/sec
++Min Hitpoints:					5					; float
++Max Hitpoints:					10					; float
++Damage Multiplier:				0.3					; float
++Lightning Arc Percent:			10					; float, 0-100, Controls what percent of debris pieces will have the damage lightning effect applied to them. Default is 50% 
+$Density:                       1
+$Damp:                  	0.3
+$Rotdamp:                       0.4
+$Banking Constant:				0.0
+$Max Velocity:					0.0, 0.0, 35.0
+$Rotation time:					150.0, 150.0, 100.0
+$Rear Velocity:					0.0
+$Forward accel:					3.0
+$Forward decel:					5.0
+$Slide accel:					0.0
+$Slide decel:					0.0
+$Glide:					NO
+;$Autoaim FOV:				0
+;+Converging Autoaim
+;+Minimum Distance:			5
+$Convergence:	
++Automatic
++Minimum Distance:			5
+$Warpin Type:				Hyperspace
+$Warpin Start Sound:		Hyperspace_Exit
+$Warpin End Sound:			Hyperspace_Lighter
+$Warpin Speed:				300
+$Warpin Time:				3.0
+$Warpin Decel Exp:			1.0
+$Warpin Radius:				6000
+$Warpout Type:				Hyperspace
+$Warpout Start Sound:		Hyperspace_Start
+$Warpout End Sound:			Hyperspace_Lighter
+$Warpout Engage Time:		1.3
+$Warpout Speed:				300
+$Warpout Time:				2.0
+$Warpout Accel Exp:			1.0
+$Warpout Radius:			6000
+$Expl inner rad:				100.0
+$Expl outer rad:				2100.0
+$Expl damage:					10.0
+$Expl blast:					3500.0
+$Expl Propagates:				YES				;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Propagating Expl Radius Multiplier:		1.3
+$Death FX Explosion Radius Mult:		1.2				; Defines the multiplier applied to the ship death explosions
+$Death FX Explosion Count:				8					; Defines the number of explosion effect game uses when a large ship dies, default is 6. 
+$Ship Splitting Particles:				
++Max Particles:							150
++Min Particles:							90
++Max Velocity:							40
++Min Velocity:							20
++Normal Variance:						2
+$Ship Death Particles:
++Max Particles:							750
++Min Particles:							400
++Max Radius:							2.5
++Min Radius:							1.3
++Max Lifetime:							15.0
++Min Lifetime:							6
++Max Velocity:							60.0
++Min Velocity:							30.0
++Normal Variance:						2.0
+$Shockwave Speed:				0			;; speed shockwave expands at, 0 means no shockwave
+$Explosion Animations:					( 4, 5, 6 )	
+$Shields:                       75000
+$Power Output:					400.0
+$Shield Regeneration Rate:	0.001
+$Weapon Regeneration Rate:	0.32
+$Max Oclk Speed:				45.0
+$Max Weapon Eng:				200.0
+$Hitpoints:                     90000
+$Subsystem Repair Rate:		1.0
+$Flags:                         ( "capital" "in tech database" "surface shields" "model point shields" )
+$AI Class:                      Captain
+$Afterburner:           	NO
+$Countermeasures:				0
+$Scan time:                     4000
+$EngineSnd:						MC_Engine.wav                   ;; Engine sound of ship
+$Closeup_pos:					0.0, 0.0, -1115
+$Closeup_zoom:					0.5
+$Shield_icon:           Shield_Moncal
+$Score:							100
+$Thruster Bitmap 1:			Thruster03-01		;Defines the effect for the standard drives. Overrides Species_defs.tbl line +Normal: under the $Thrustglows: entry.
+$Thruster Bitmap 1a:		ThrusterGlow01				;Defines the effect for the afterburner. Overrides Species_defs.tbl line +Afterburner: under the $Thrustglows: entry.
+$Thruster01 Radius factor:	1.0					
+$Thruster Bitmap 2:			Thruster02-01LessHaze			;plane at engines, Defines the effect for the standard drives. Overrides Species_defs.tbl line +Sec_Normal: under the $ThrustAnims: entry.
+$Thruster Bitmap 2a:		Thruster02-01					;plane at engines, Defines the effect for the afterburner. Overrides Species_defs.tbl line +Sec_Afterburn: under the $ThrustAnims: entry.		
+$Thruster02 Radius factor:	0.0
+$Thruster02 Length factor:	0.0					;Defines the length multiplier for the trail type (secondary) glowpoint thrusters.
+$Thruster Bitmap 3:			Thruster03-01					; Overrides Species_defs.tbl line +Ter_Normal: under the $ThrustAnims: entry.
+$Thruster Bitmap 3a:		ThrusterGlow01					; Overrides Species_defs.tbl line +Ter_Afterburn: under the $ThrustAnims: entry.
+$Thruster03 Radius factor:	1.0
+$Thruster Bitmap Distortion:			Thruster03-01		; Defines name of normal thruster distortion envelope animation. Overrides Species_defs.tbl line +Dist_Normal: under the $ThrustAnims: entry.
+$Thruster Bitmap Distortion a:			ThrusterGlow01		; Defines name of afterburner thruster distortion envelope animation. Overrides Species_defs.tbl line +Dist_Afterburn: under the $ThrustAnims: entry.
+$Thruster Distortion Radius factor:	1.0
+$Thruster Distortion Length factor:	1.0
+$Thruster Distortion:	YES
+$Radar Image 2D:				radar-capital
+$3D Radar Blip Size Multiplier:	1.6
+$Subsystem:				Bridge01, 3, 0
+	$Alt Subsystem Name:	Bridge
+	$Flags:					( "ignore if dead" )
+;$Subsystem:				communications02, 3, 0
+;	$Alt Subsystem Name:	Comm. System
+;	$Flags:					( "ignore if dead" )
+$Subsystem:				Bridge02, 3, 0
+	$Alt Subsystem Name:	Bridge
+	$Flags:					( "ignore if dead" )
+$Subsystem:				sensors02, 2.5, 0
+	$Alt Subsystem Name:	Sensor
+	$Flags:					( "ignore if dead" )
+$Subsystem:				communication02, 2.5, 0
+	$Alt Subsystem Name:	Comm. System
+	$Flags:					( "ignore if dead" )
+$Subsystem:				sensors01, 2.5, 0
+	$Alt Subsystem Name:	Sensor
+	$Flags:					( "ignore if dead" )
+$Subsystem:				communication01, 2.5, 0
+	$Alt Subsystem Name:	Comm. System
+	$Flags:					( "ignore if dead" )
+$Subsystem:             engine01, 8, 0
+		$Alt Subsystem Name:	Engine 									
+		$Engine Wash:			Default300
+		$Flags:					( "ignore if dead" "damage as hull" )
+$Subsystem:             engine02, 8, 0
+		$Alt Subsystem Name:	Engine									
+		$Engine Wash:			Default300
+		$Flags:					( "ignore if dead" "damage as hull" )
+$Subsystem:             engine03, 8, 0
+		$Alt Subsystem Name:	Engine									
+		$Engine Wash:			Default300
+		$Flags:					( "ignore if dead" "damage as hull" )
+$Subsystem:             engine04, 8, 0
+		$Alt Subsystem Name:	Engine								
+		$Engine Wash:			Default300
+		$Flags:					( "ignore if dead" "damage as hull" )
+$Subsystem:             Fighterbay01, 3, 0
+		$Alt Subsystem Name:	Fighterbay									
+		$Flags:					( "ignore if dead" "damage as hull" "allow landing" )
+$Subsystem:             Fighterbay02, 3, 0
+		$Alt Subsystem Name:	Fighterbay									
+		$Flags:					( "ignore if dead" "damage as hull" "allow landing" )
+$Subsystem:             Fighterbay03, 3, 0
+		$Alt Subsystem Name:	Fighterbay									
+		$Flags:					( "ignore if dead" "damage as hull" "allow landing" )		
+$Subsystem:                     turret00, 0.17, 1
+		$Alt Subsystem Name:							L Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret Weak" )
+		$RotationSnd:									252
+		$Turret Base RotationSnd:						252
+		$Turret Gun RotationSnd:						253
+		$Turret BaseSnd Volume:							1.0	
+		$Turret GunSnd Volume:							1.0
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	2200
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret01, 0.30, 1
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret02, 0.30, 1
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret03, 0.17, 1
+		$Alt Subsystem Name:							L Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret Weak" )
+		$RotationSnd:									252
+		$Turret Base RotationSnd:						252
+		$Turret Gun RotationSnd:						253
+		$Turret BaseSnd Volume:							1.0	
+		$Turret GunSnd Volume:							1.0
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	2200
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret04, 0.52, 1
+		$Alt Subsystem Name:							H Turbolaser
+;
+		$Default PBanks:                                ( "Terran Huge Turret" )
+		$RotationSnd:		256		
+		$Turret Base RotationSnd:	256
+		$Turret Gun RotationSnd:	257
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	8000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret05, 0.30, 1
+		$Alt Subsystem Name:							Launcher
+;
+		$Default PBanks:                                ( "Standard Flak" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "use multiple guns" "check hull" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret06, 0.30, 1
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret07, 0.52, 1
+		$Alt Subsystem Name:							H Turbolaser
+;
+		$Default PBanks:                                ( "Terran Huge Turret" )
+		$RotationSnd:		256		
+		$Turret Base RotationSnd:	256
+		$Turret Gun RotationSnd:	257
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	8000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret08, 0.52, 1
+		$Alt Subsystem Name:							H Turbolaser
+;
+		$Default PBanks:                                ( "Terran Huge Turret" )
+		$RotationSnd:		256		
+		$Turret Base RotationSnd:	256
+		$Turret Gun RotationSnd:	257
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	8000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret09, 0.30, 1
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret10, 0.17, 1
+		$Alt Subsystem Name:							L Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret Weak" )
+		$RotationSnd:									252
+		$Turret Base RotationSnd:						252
+		$Turret Gun RotationSnd:						253
+		$Turret BaseSnd Volume:							1.0	
+		$Turret GunSnd Volume:							1.0
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	2200
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret11, 0.52, 1
+		$Alt Subsystem Name:							H Turbolaser
+;
+		$Default PBanks:                                ( "Terran Huge Turret" )
+		$RotationSnd:		256		
+		$Turret Base RotationSnd:	256
+		$Turret Gun RotationSnd:	257
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	8000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret12, 0.30, 1
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret13, 0.52, 1
+		$Alt Subsystem Name:							H Turbolaser
+;
+		$Default PBanks:                                ( "Terran Huge Turret" )
+		$RotationSnd:		256		
+		$Turret Base RotationSnd:	256
+		$Turret Gun RotationSnd:	257
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	8000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret14, 0.30, 1
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret15, 0.30, 1
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret16, 0.17, 1
+		$Alt Subsystem Name:							L Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret Weak" )
+		$RotationSnd:									252
+		$Turret Base RotationSnd:						252
+		$Turret Gun RotationSnd:						253
+		$Turret BaseSnd Volume:							1.0	
+		$Turret GunSnd Volume:							1.0
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	2200
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret17, 0.30, 1
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret18, 0.52, 1
+		$Alt Subsystem Name:							H Turbolaser
+;
+		$Default PBanks:                                ( "Terran Huge Turret" )
+		$RotationSnd:		256		
+		$Turret Base RotationSnd:	256
+		$Turret Gun RotationSnd:	257
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	8000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret19, 0.52, 1
+		$Alt Subsystem Name:							H Turbolaser
+;
+		$Default PBanks:                                ( "Terran Huge Turret" )
+		$RotationSnd:		256		
+		$Turret Base RotationSnd:	256
+		$Turret Gun RotationSnd:	257
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	8000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret20, 0.30, 1
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret21, 0.52, 1
+		$Alt Subsystem Name:							H Turbolaser
+;
+		$Default PBanks:                                ( "Terran Huge Turret" )
+		$RotationSnd:		256		
+		$Turret Base RotationSnd:	256
+		$Turret Gun RotationSnd:	257
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	8000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret22, 0.17, 1
+		$Alt Subsystem Name:							L Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret Weak" )
+		$RotationSnd:									252
+		$Turret Base RotationSnd:						252
+		$Turret Gun RotationSnd:						253
+		$Turret BaseSnd Volume:							1.0	
+		$Turret GunSnd Volume:							1.0
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	2200
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret23, 0.30, 1
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret24, 0.17, 1
+		$Alt Subsystem Name:							L Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret Weak" )
+		$RotationSnd:									252
+		$Turret Base RotationSnd:						252
+		$Turret Gun RotationSnd:						253
+		$Turret BaseSnd Volume:							1.0	
+		$Turret GunSnd Volume:							1.0
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	2200
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret25, 0.52, 1
+		$Alt Subsystem Name:							H Turbolaser
+;
+		$Default PBanks:                                ( "Terran Huge Turret" )
+		$RotationSnd:		256		
+		$Turret Base RotationSnd:	256
+		$Turret Gun RotationSnd:	257
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	8000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret26, 0.38, 1
+		$Alt Subsystem Name:							Launcher
+;
+		$Default PBanks:                                ( "Standard Flak" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	5500
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "use multiple guns" "check hull" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret27, 0.30, 1
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret28, 0.38, 1
+		$Alt Subsystem Name:							I Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	5500
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret29, 0.38, 45
+		$Alt Subsystem Name:							I Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	5500
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret31, 0.30, 45
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret32, 0.17, 45
+		$Alt Subsystem Name:							L Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret Weak" )
+		$RotationSnd:									252
+		$Turret Base RotationSnd:						252
+		$Turret Gun RotationSnd:						253
+		$Turret BaseSnd Volume:							1.0	
+		$Turret GunSnd Volume:							1.0
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	2200
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret33, 0.38, 45
+		$Alt Subsystem Name:							I Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	5500
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret34, 0.30, 45
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret35, 0.52, 45
+		$Alt Subsystem Name:							H Turbolaser
+;
+		$Default PBanks:                                ( "Terran Huge Turret" )
+		$RotationSnd:		256		
+		$Turret Base RotationSnd:	256
+		$Turret Gun RotationSnd:	257
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	8000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret36, 0.52, 45
+		$Alt Subsystem Name:							H Turbolaser
+;
+		$Default PBanks:                                ( "Terran Huge Turret" )
+		$RotationSnd:		256		
+		$Turret Base RotationSnd:	256
+		$Turret Gun RotationSnd:	257
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	8000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret37, 0.30, 45
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret38, 0.38, 45
+		$Alt Subsystem Name:							I Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	5500
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret39, 0.38, 45
+		$Alt Subsystem Name:							I Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	5500
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret40, 0.17, 45
+		$Alt Subsystem Name:							L Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret Weak" )
+		$RotationSnd:									252
+		$Turret Base RotationSnd:						252
+		$Turret Gun RotationSnd:						253
+		$Turret BaseSnd Volume:							1.0	
+		$Turret GunSnd Volume:							1.0
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	2200
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+			
+$Subsystem:                     turret41, 0.30, 45
+		$Alt Subsystem Name:							M Turbolaser
+;
+		$Default PBanks:                                ( "Terran Turret" )
+		$RotationSnd:		254		
+		$Turret Base RotationSnd:	254
+		$Turret Gun RotationSnd:	255
+		$Turret BaseSnd Volume:	1.0	
+		$Turret GunSnd Volume:	1.0	
+		;$Turret Base FOV:							180
+		$Turret Reset Delay:						2000
+		$Turret Optimum Range:	4000
+		$Turret Direction Preference:				50					; 0 to 100. Defines the turrets preference to keep targeting targets based how far the turret should turn instead of nearest target. The higher the value the higher the preference to keep targeting targets close to previous targets direction.
+		$Max Turrets per Bomb:						2
+		$Max Turrets per Target:					7					; Only affects small ships, i.e. fighters and bombers. When this is set, when this turret tries to target a ship, it will check to see how many turrets are already targeting it and only choose it as a target if there are less than this number. This helps turrets spread their efforts out among multiple targets.
+		;$ROF:						
+		;+Use firingpoints			
+		$Flags:		 ( "ignore if dead" "reset when idle" "only target if can fire" "target requires fov" "use multiple guns" "check hull" "fire on target" )
+		;$animation: triggered
+		;$type: initial
+   			;+relative_angle:       90, 180, 0
+
+		
+;;;;===========================================================================================================================================================================================
+
+$Name:                          BFF1 Freighter
+$Short name:            		FreightER
+$Species:                       Terran
++Type:                          XSTR("Freighter", -1)
++Maneuverability:       		XSTR("Bad", -1)
++Armor:                         XSTR("Average", -1)
++Manufacturer:         			XSTR("Damorian Manufacturing Corporation", -1)
++Description:					XSTR("General Rebel Alliance Freighter", -1)
+$end_multi_text
++Tech Description:				XSTR("BFF-1 bulk freighters were freighters designed by Phylon Freight along with Aratech Repulsor Company, and built under contract by Damorian Manufacturing Corporation.", -1)
+$end_multi_text
+$POF file:                      bff1.pof
+$POF Target LOD:                0
+$Detail distance:       		(0, 150)
+;$ND:							42, 42, 224
+$Show damage:           		NO
+$Damage Lightning Type:			None
+$Impact Spew:
++Max particles:					40
++Min particles:					20
++Max Radius:					0.6						; 0.5f
++Min Radius:					0.2						; 0.2f
++Max Lifetime:					0.8						; 0.55f
++Min Lifetime:					0.2						; 0.05f
++Max Velocity:					50						; 12.0f
++Min Velocity:					35						; 2.0f
++Normal Variance:				0.2
+$Damage Spew:											; Controls the 'smoke' released on weapon impact point, Certain default values (marked with X) gain a specific multiplier based on ship radius,  If the radius is less than 20 the multiplier is 1. If the radius is larger than 40 the multipler is 1.2 Otherwise it is between 1 and 1.2
++Max Particles:					70						; X
++Min Particles:					30						; X
++Max Radius:					2.0						; X	
++Min Radius:					1.0						; X
++Max Lifetime:					3.0						; X
++Min Lifetime:					1.0						; X
++Max Velocity:					25						; X
++Min Velocity:					10						; X
++Normal Variance:				0.02					; X
+$Debris:
++Min Lifetime:					1					; float, seconds
++Max Lifetime:					10					; float, seconds 
++Min Speed:						0.1					; float, m/s
++Max Speed:						1					; float, m/s
++Min Rotation speed:			6					; Defines the minimum rotational speed of the debris, Default is (6 to 10)/Ship-radius
++Max Rotation speed:			10					; float, rad/sec
++Min Hitpoints:					5					; float
++Max Hitpoints:					10					; float
++Damage Multiplier:				0.3					; float
++Lightning Arc Percent:			10					; float, 0-100, Controls what percent of debris pieces will have the damage lightning effect applied to them. Default is 50% 
+$Density:                       1
+$Damp:                  	0.3
+$Rotdamp:                       0.4
+$Banking Constant:				0.0
+$Max Velocity:          0.0, 0.0, 35.0                  ;; in x/y/z -- z only specified forward.  use special tokens for backward movement
+$Rotation time:         30.0, 30.0, 30.0
+$Rear Velocity:         0.0
+$Forward accel:         3.0
+$Forward decel:         4.0
+$Slide accel:           0.0
+$Slide decel:           0.0
+$Glide:					NO
+;$Autoaim FOV:				0
+;+Converging Autoaim
+;+Minimum Distance:			5
+$Convergence:	
++Automatic
++Minimum Distance:			5
+$Warpin Type:				Hyperspace
+$Warpin Start Sound:		Hyperspace_Exit
+$Warpin End Sound:			Hyperspace_Lighter
+$Warpin Speed:				300
+$Warpin Time:				3.0
+$Warpin Decel Exp:			1.0
+$Warpin Radius:				1000
+$Warpout Type:				Hyperspace
+$Warpout Start Sound:		Hyperspace_Start
+$Warpout End Sound:			Hyperspace_Lighter
+$Warpout Engage Time:		1.3
+$Warpout Speed:				300
+$Warpout Time:				2.0
+$Warpout Accel Exp:			1.0
+$Warpout Radius:			1000
+$Expl inner rad:        60.0
+$Expl outer rad:        255.0
+$Expl damage:           5.0
+$Expl blast:            1000.0
+$Expl Propagates:       YES                                                      ;; If set to Yes, then when the ship dies, the explosion propagates through it.
+$Propagating Expl Radius Multiplier:		2.0
+$Death FX Explosion Radius Mult:		1.5					; Defines the multiplier applied to the ship death explosions
+$Death FX Explosion Count:				3					; Defines the number of explosion effect game uses when a large ship dies, default is 6. 
+$Ship Splitting Particles:				
++Max Particles:							120
++Min Particles:							70
++Max Velocity:							40
++Min Velocity:							20
++Normal Variance:						2
+$Ship Death Particles:
++Max Particles:							500
++Min Particles:							200
++Max Radius:							1.5
++Min Radius:							0.3
++Max Lifetime:							10.0
++Min Lifetime:							4
++Max Velocity:							60.0
++Min Velocity:							30.0
++Normal Variance:						2.0
+$Shockwave Speed:       		0.0                                             ;; speed shockwave expands at, 0 means no shockwave
+$Explosion Animations:					( 4, 5, 6 )	
+$Shields:                       500
+$Shield Color:					100 100 255
+$Power Output:          		2.0
+$Shield Regeneration Rate:		0.006
+$Weapon Regeneration Rate:		0.1
+$Max Oclk Speed:        		45.0
+$Max Weapon Eng:        		0.0
+$Hitpoints:                     1000
+$Subsystem Repair Rate:		1.0
+$Flags:                         ( "freighter" "surface shields" "model point shields" )
+$AI Class:                      Captain
+$Afterburner:           NO
+$Countermeasures:       0
+$Scan time:                     2000
+$EngineSnd:       Corvette_Engine.wav                  ;; Engine sound of ship
+$Closeup_pos:           0.0, 0.0, -150
+$Closeup_zoom:          0.5
+$Shield_icon:           Shield_Bff1
+;$Ship_icon:                     minixwing
+;$Ship_anim:                     demoxwing
+;$Ship_overhead: 				loadxwing
+$Score:             8
+$Thruster01 Radius factor:	1.0										;plane at engines, Defines the effect for the afterburner. Overrides Species_defs.tbl line +Sec_Afterburn: under the $ThrustAnims: entry.		
+$Thruster02 Radius factor:	0.0
+$Thruster02 Length factor:	0.0					;Defines the length multiplier for the trail type (secondary) glowpoint thrusters.
+$Thruster03 Radius factor:	1.0
+$Thruster Distortion Radius factor:	0.8
+$Thruster Distortion Length factor:	0.8
+$Thruster Distortion:	YES
+$Radar Image 2D:				radar-freighter
+$3D Radar Blip Size Multiplier:	0.5
+$Subsystem:             engines, 10, 0
+		$Alt Subsystem Name:	Engines 									
+		$Engine Wash:			Default300
+		$Flags:					( "ignore if dead" "damage as hull" )
+
 
 $Name:                          EF76 Nebulon B Frigate
 $Short name:					Neb B
@@ -2836,7 +4191,7 @@ $Subsystem:                     turret08, 0.643, 1.0
 			
 $Subsystem:                     turret09, 0.643, 1.0
 		$Alt Subsystem Name:						     Turret Launcher
-        $Default sBanks:                                ( "Standart Flak" )
+        $Default sBanks:                                ( "Standard Flak" )
 		$RotationSnd:		254		
 		$Turret Base RotationSnd:	254
 		$Turret Gun RotationSnd:	255
@@ -2981,7 +4336,7 @@ $Weapon Regeneration Rate:	0.35
 $Max Oclk Speed:				55.0
 $Max Weapon Eng:				200.0
 $Hitpoints:                     125000
-$Subsystem Repair Rate:		1.0
+$Subsystem Repair Rate:		0.0
 $Flags:                         ( "cruiser" "in tech database")
 $AI Class:                      Captain
 $Afterburner:					NO
@@ -2991,6 +4346,8 @@ $EngineSnd:						128                   ;; Engine sound of ship
 $Closeup_pos:					0.0, 0.0, -1315
 $Closeup_zoom:					0.5
 $Score:							100
+$Radar Image 2D:				radar-bigship
+$3D Radar Blip Size Multiplier:	0.67
 ;$Subsystem:                     sensors,                         4, 0
 ;$Subsystem:                     communication,  4, 0.0
 ;$Subsystem:                     navigation,              4, 0.0
@@ -5622,7 +6979,7 @@ $Name:                  GTNB Pharos
 $Short name:            JBuoy
 $Species:               Terran
 $POF file:              navbuoy.pof
-$Detail distance:       (0, 100)
+$Detail distance:       (0, 100, 5000)
 $Show damage:           YES
 $Density:               1
 $Damp:                  0.2
@@ -5661,7 +7018,7 @@ $Name:                  GTNB Pharos.
 $Short name:            JBuoy
 $Species:               Terran
 $POF file:              navbuoy.pof
-$Detail distance:       (0, 100)
+$Detail distance:       (0, 100, 5000)
 $Show damage:           YES
 $Density:               1
 $Damp:                  0.2
@@ -8156,7 +9513,7 @@ $Default PBanks:        ( "Shivan Heavy Laser" "Shivan Heavy Laser" )
 $Default SBanks:        ( "Harpoon" )
 $SBank Capacity:        ( 20 )
 
-$Shields:                       700
+$Shields:                       200
 $Shield Color:		255 92 92
 $Power Output:          2.0
 $Max Oclk Speed:        90.0
