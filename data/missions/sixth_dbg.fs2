@@ -4,7 +4,7 @@ $Version: 0.10
 $Name:  XSTR("!6. Great Battle test", -1)
 $Author: Eldaron, ksotar
 $Created: 05/23/18 at 12:57:02
-$Modified: 09/04/18 at 00:13:47
+$Modified: 09/06/18 at 02:00:47
 $Notes:
 This is a FRED2_OPEN created mission.
 $End Notes:
@@ -1436,7 +1436,7 @@ $Determination: 10
 +Score: 10
 
 $Name: Delta 1		;! Object #45
-$Class: GTF Ulysses
+$Class: GTF Loki
 $Team: Friendly
 $Location: -431.611053, -0.002174, 4209.661621
 $Orientation:
@@ -1444,7 +1444,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Lieutenant
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1460,7 +1460,7 @@ $Determination: 10
 +Score: 10
 
 $Name: Delta 2		;! Object #46
-$Class: GTF Ulysses
+$Class: GTF Loki
 $Team: Friendly
 $Location: -355.385284, -0.002175, 4204.617676
 $Orientation:
@@ -1468,7 +1468,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Lieutenant
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1484,7 +1484,7 @@ $Determination: 10
 +Score: 10
 
 $Name: Delta 3		;! Object #47
-$Class: GTF Ulysses
+$Class: GTF Loki
 $Team: Friendly
 $Location: -272.118469, -0.002170, 4223.487793
 $Orientation:
@@ -1492,7 +1492,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Lieutenant
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1508,7 +1508,7 @@ $Determination: 10
 +Score: 10
 
 $Name: Delta 4		;! Object #48
-$Class: GTF Ulysses
+$Class: GTF Loki
 $Team: Friendly
 $Location: -360.894257, -0.002171, 4128.361816
 $Orientation:
@@ -1516,7 +1516,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Lieutenant
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1815,7 +1815,7 @@ $Determination: 10
 +Score: 16
 
 $Name: Epsilon 1		;! Object #60
-$Class: GTF Ulysses
+$Class: GTF Loki
 $Team: Friendly
 $Location: -483.919769, -0.002343, 3923.600830
 $Orientation:
@@ -1823,7 +1823,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Lieutenant
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1836,11 +1836,10 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 $Name: Epsilon 2		;! Object #61
-$Class: GTF Ulysses
+$Class: GTF Loki
 $Team: Friendly
 $Location: -407.694000, -0.002344, 3918.556885
 $Orientation:
@@ -1848,7 +1847,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Lieutenant
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1861,11 +1860,10 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 $Name: Epsilon 3		;! Object #62
-$Class: GTF Ulysses
+$Class: GTF Loki
 $Team: Friendly
 $Location: -324.427185, -0.002339, 3937.427002
 $Orientation:
@@ -1873,7 +1871,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Lieutenant
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1886,11 +1884,10 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 $Name: Epsilon 4		;! Object #63
-$Class: GTF Ulysses
+$Class: GTF Loki
 $Team: Friendly
 $Location: -413.202972, -0.002340, 3842.301025
 $Orientation:
@@ -1898,7 +1895,7 @@ $Orientation:
 	0.000000, 1.000000, 0.000000,
 	0.000000, 0.000000, 1.000000
 $AI Behavior: None
-+AI Class: Lieutenant
++AI Class: BP2-Lieutenant
 $Cargo 1:  XSTR("Nothing", -1)
 +Initial Hull: 100
 +Subsystem: Pilot
@@ -1911,7 +1908,6 @@ $Determination: 10
 +Flags2: ( )
 +Respawn priority: 0
 +Group: 0
-+Use Table Score:
 +Score: 8
 
 #Wings		;! 14 total
@@ -2096,25 +2092,6 @@ $Ships: (		;! 4 total
 )
 +Flags: ( "no-dynamic" )
 
-$Name: Gamma
-$Waves: 1
-$Wave Threshold: 0
-$Special Ship: 0		;! Gamma 1
-
-$Arrival Location: Hyperspace
-$Arrival Cue: ( true ) 
-$Departure Location: Hyperspace
-$Departure Cue: ( false ) 
-$Ships: (		;! 4 total
-	"Gamma 1"
-	"Gamma 2"
-	"Gamma 3"
-	"Gamma 4"
-)
-$AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
-+Hotkey: 2
-+Flags: ( )
-
 $Name: Delta
 $Waves: 1
 $Wave Threshold: 0
@@ -2188,6 +2165,24 @@ $Ships: (		;! 4 total
 $AI Goals: ( goals ( ai-guard "Impassioned" 50 ) )
 +Flags: ( )
 
+$Name: Gamma
+$Waves: 1
+$Wave Threshold: 0
+$Special Ship: 0		;! Gamma 1
+
+$Arrival Location: Hyperspace
+$Arrival Cue: ( true ) 
+$Departure Location: Hyperspace
+$Departure Cue: ( false ) 
+$Ships: (		;! 4 total
+	"Gamma 1"
+	"Gamma 2"
+	"Gamma 3"
+	"Gamma 4"
+)
++Hotkey: 2
++Flags: ( )
+
 #Events		;! 23 total
 
 $Formula: ( when 
@@ -2259,10 +2254,6 @@ $Formula: ( when
          "High" 
          "Got sattelite" 
       )
-      ( when 
-         ( false ) 
-         ( ship-vanish "<argument>" ) 
-      )
       ( friendly-stealth-invisible 
          "<argument>" 
       )
@@ -2271,7 +2262,7 @@ $Formula: ( when
       ( self-destruct "<argument>" ) 
    )
 )
-+Name: Initialize 2
++Name: *Silently destroy sattelites
 +Repeat Count: 1
 +Interval: 1
 +Event Log Flags: ( "first repeat" "last repeat" "first trigger" "last trigger" "state change" )

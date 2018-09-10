@@ -8276,7 +8276,7 @@ $Default PBanks:        ( "Shivan Heavy Laser" "Shivan Heavy Laser" )
 $Default SBanks:        ( "Harpoon" )
 $SBank Capacity:        ( 20 )
 
-$Shields:                       700
+$Shields:                       200
 $Shield Color:		255 92 92
 $Power Output:          2.0
 $Max Oclk Speed:        90.0
