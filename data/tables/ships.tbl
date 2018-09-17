@@ -2543,7 +2543,7 @@ $Ship Death Particles:
 +Min Velocity:							30.0
 +Normal Variance:						2.0
 $Shockwave Speed:       0.0                                             ;; speed shockwave expands at, 0 means no shockwave
-$Explosion Animations:					( 4, 5, 6 )		
+;$Explosion Animations:					( 4, 5, 6 )		
 $Shields:                       0
 $Shield Color:		100 100 255
 $Power Output:          50.0
@@ -2751,7 +2751,7 @@ $Ship Death Particles:
 +Min Velocity:							30.0
 +Normal Variance:						2.0
 $Shockwave Speed:				0			;; speed shockwave expands at, 0 means no shockwave
-$Explosion Animations:					( 4, 5, 6 )	
+;$Explosion Animations:					( 4, 5, 6 )	
 $Shields:                       75000
 $Power Output:					400.0
 $Shield Regeneration Rate:	0.001
@@ -3844,7 +3844,6 @@ $Ship Death Particles:
 +Min Velocity:							30.0
 +Normal Variance:						2.0
 $Shockwave Speed:       		0.0                                             ;; speed shockwave expands at, 0 means no shockwave
-$Explosion Animations:					( 4, 5, 6 )	
 $Shields:                       500
 $Shield Color:					100 100 255
 $Power Output:          		2.0
